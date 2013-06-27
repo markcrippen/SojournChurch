@@ -10,4 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property(weak, nonatomic) IBOutlet UIView *tabsView;
+@property(weak, nonatomic)IBOutlet UIView *placeholderView;
+@property(weak, nonatomic) UIViewController *currentViewController;
+
+- (IBAction)prayerButton:(UIButton *)sender;
 @end

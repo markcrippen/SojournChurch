@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EB0109E17724D37000439D3 /* prayerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB0109D17724D37000439D3 /* prayerTable.m */; };
+		8EB010A317737FDF000439D3 /* titleBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB010A217737FDF000439D3 /* titleBar.png */; };
+		8EB010A51773A62D000439D3 /* prayingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB010A41773A62D000439D3 /* prayingIcon.png */; };
 		8EBAC9D5176EB491005CB4A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D4176EB491005CB4A1 /* UIKit.framework */; };
 		8EBAC9D7176EB491005CB4A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D6176EB491005CB4A1 /* Foundation.framework */; };
 		8EBAC9D9176EB491005CB4A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D8176EB491005CB4A1 /* CoreGraphics.framework */; };
@@ -18,9 +21,37 @@
 		8EBAC9EB176EB491005CB4A1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBAC9EA176EB491005CB4A1 /* Default-568h@2x.png */; };
 		8EBAC9EE176EB491005CB4A1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBAC9EC176EB491005CB4A1 /* MainStoryboard.storyboard */; };
 		8EBAC9F1176EB491005CB4A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBAC9F0176EB491005CB4A1 /* ViewController.m */; };
+		8EBAC9FA1770F198005CB4A1 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBAC9F91770F198005CB4A1 /* background.png */; };
+		8EBACA0A1770F2EA005CB4A1 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBAC9FB1770F2EA005CB4A1 /* background@2x.png */; };
+		8EBACA0B1770F2EA005CB4A1 /* button_separator.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBAC9FC1770F2EA005CB4A1 /* button_separator.png */; };
+		8EBACA0C1770F2EA005CB4A1 /* button_separator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBAC9FD1770F2EA005CB4A1 /* button_separator@2x.png */; };
+		8EBACA0D1770F2EA005CB4A1 /* cogs_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBAC9FE1770F2EA005CB4A1 /* cogs_highlighted.png */; };
+		8EBACA0E1770F2EA005CB4A1 /* cogs_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBAC9FF1770F2EA005CB4A1 /* cogs_highlighted@2x.png */; };
+		8EBACA0F1770F2EA005CB4A1 /* cogs.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBACA001770F2EA005CB4A1 /* cogs.png */; };
+		8EBACA101770F2EA005CB4A1 /* cogs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBACA011770F2EA005CB4A1 /* cogs@2x.png */; };
+		8EBACA111770F2EA005CB4A1 /* heart_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBACA021770F2EA005CB4A1 /* heart_highlighted.png */; };
+		8EBACA121770F2EA005CB4A1 /* heart_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBACA031770F2EA005CB4A1 /* heart_highlighted@2x.png */; };
+		8EBACA131770F2EA005CB4A1 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBACA041770F2EA005CB4A1 /* heart.png */; };
+		8EBACA141770F2EA005CB4A1 /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBACA051770F2EA005CB4A1 /* heart@2x.png */; };
+		8EBACA151770F2EA005CB4A1 /* home_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBACA061770F2EA005CB4A1 /* home_highlighted.png */; };
+		8EBACA161770F2EA005CB4A1 /* home_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBACA071770F2EA005CB4A1 /* home_highlighted@2x.png */; };
+		8EBACA171770F2EA005CB4A1 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBACA081770F2EA005CB4A1 /* home.png */; };
+		8EBACA181770F2EA005CB4A1 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBACA091770F2EA005CB4A1 /* home@2x.png */; };
+		8EBACA1B1770F9CA005CB4A1 /* test2Segues.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBACA1A1770F9CA005CB4A1 /* test2Segues.m */; };
+		8EBACA2A177244EE005CB4A1 /* PrayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBACA29177244EE005CB4A1 /* PrayerCell.m */; };
+		8EDB7B731774FF900024EF3E /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB7B721774FF900024EF3E /* loginViewController.m */; };
+		8EDB7B76177934760024EF3E /* SubmitPrayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB7B75177934760024EF3E /* SubmitPrayerViewController.m */; };
+		8EDB7B79177934940024EF3E /* SubmitPraiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB7B78177934940024EF3E /* SubmitPraiseViewController.m */; };
+		8EDB7B7C177A350F0024EF3E /* PrayerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB7B7B177A350F0024EF3E /* PrayerDetailViewController.m */; };
+		8EDB7B7F177B3CE10024EF3E /* praiseTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB7B7E177B3CE10024EF3E /* praiseTable.m */; };
+		8EDB7B82177B3D010024EF3E /* praiseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB7B81177B3D010024EF3E /* praiseCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8EB0109C17724D37000439D3 /* prayerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prayerTable.h; sourceTree = "<group>"; };
+		8EB0109D17724D37000439D3 /* prayerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prayerTable.m; sourceTree = "<group>"; };
+		8EB010A217737FDF000439D3 /* titleBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = titleBar.png; path = ../../titleBar.png; sourceTree = "<group>"; };
+		8EB010A41773A62D000439D3 /* prayingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prayingIcon.png; path = images/prayingIcon.png; sourceTree = "<group>"; };
 		8EBAC9D1176EB491005CB4A1 /* test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBAC9D4176EB491005CB4A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EBAC9D6176EB491005CB4A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +68,38 @@
 		8EBAC9ED176EB491005CB4A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8EBAC9EF176EB491005CB4A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8EBAC9F0176EB491005CB4A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8EBAC9F91770F198005CB4A1 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		8EBAC9FB1770F2EA005CB4A1 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "../../../Downloads/Example Images/background@2x.png"; sourceTree = "<group>"; };
+		8EBAC9FC1770F2EA005CB4A1 /* button_separator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_separator.png; path = "../../../Downloads/Example Images/button_separator.png"; sourceTree = "<group>"; };
+		8EBAC9FD1770F2EA005CB4A1 /* button_separator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button_separator@2x.png"; path = "../../../Downloads/Example Images/button_separator@2x.png"; sourceTree = "<group>"; };
+		8EBAC9FE1770F2EA005CB4A1 /* cogs_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cogs_highlighted.png; path = "../../../Downloads/Example Images/cogs_highlighted.png"; sourceTree = "<group>"; };
+		8EBAC9FF1770F2EA005CB4A1 /* cogs_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cogs_highlighted@2x.png"; path = "../../../Downloads/Example Images/cogs_highlighted@2x.png"; sourceTree = "<group>"; };
+		8EBACA001770F2EA005CB4A1 /* cogs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cogs.png; path = "../../../Downloads/Example Images/cogs.png"; sourceTree = "<group>"; };
+		8EBACA011770F2EA005CB4A1 /* cogs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cogs@2x.png"; path = "../../../Downloads/Example Images/cogs@2x.png"; sourceTree = "<group>"; };
+		8EBACA021770F2EA005CB4A1 /* heart_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart_highlighted.png; path = "../../../Downloads/Example Images/heart_highlighted.png"; sourceTree = "<group>"; };
+		8EBACA031770F2EA005CB4A1 /* heart_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "heart_highlighted@2x.png"; path = "../../../Downloads/Example Images/heart_highlighted@2x.png"; sourceTree = "<group>"; };
+		8EBACA041770F2EA005CB4A1 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart.png; path = "../../../Downloads/Example Images/heart.png"; sourceTree = "<group>"; };
+		8EBACA051770F2EA005CB4A1 /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "heart@2x.png"; path = "../../../Downloads/Example Images/heart@2x.png"; sourceTree = "<group>"; };
+		8EBACA061770F2EA005CB4A1 /* home_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_highlighted.png; path = "../../../Downloads/Example Images/home_highlighted.png"; sourceTree = "<group>"; };
+		8EBACA071770F2EA005CB4A1 /* home_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home_highlighted@2x.png"; path = "../../../Downloads/Example Images/home_highlighted@2x.png"; sourceTree = "<group>"; };
+		8EBACA081770F2EA005CB4A1 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = "../../../Downloads/Example Images/home.png"; sourceTree = "<group>"; };
+		8EBACA091770F2EA005CB4A1 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "../../../Downloads/Example Images/home@2x.png"; sourceTree = "<group>"; };
+		8EBACA191770F9CA005CB4A1 /* test2Segues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test2Segues.h; sourceTree = "<group>"; };
+		8EBACA1A1770F9CA005CB4A1 /* test2Segues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test2Segues.m; sourceTree = "<group>"; };
+		8EBACA28177244EE005CB4A1 /* PrayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayerCell.h; sourceTree = "<group>"; };
+		8EBACA29177244EE005CB4A1 /* PrayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerCell.m; sourceTree = "<group>"; };
+		8EDB7B711774FF900024EF3E /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		8EDB7B721774FF900024EF3E /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		8EDB7B74177934760024EF3E /* SubmitPrayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitPrayerViewController.h; sourceTree = "<group>"; };
+		8EDB7B75177934760024EF3E /* SubmitPrayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitPrayerViewController.m; sourceTree = "<group>"; };
+		8EDB7B77177934940024EF3E /* SubmitPraiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitPraiseViewController.h; sourceTree = "<group>"; };
+		8EDB7B78177934940024EF3E /* SubmitPraiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitPraiseViewController.m; sourceTree = "<group>"; };
+		8EDB7B7A177A350F0024EF3E /* PrayerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayerDetailViewController.h; sourceTree = "<group>"; };
+		8EDB7B7B177A350F0024EF3E /* PrayerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerDetailViewController.m; sourceTree = "<group>"; };
+		8EDB7B7D177B3CE10024EF3E /* praiseTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = praiseTable.h; path = ../praiseTable.h; sourceTree = "<group>"; };
+		8EDB7B7E177B3CE10024EF3E /* praiseTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = praiseTable.m; path = ../praiseTable.m; sourceTree = "<group>"; };
+		8EDB7B80177B3D010024EF3E /* praiseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = praiseCell.h; sourceTree = "<group>"; };
+		8EDB7B81177B3D010024EF3E /* praiseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = praiseCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +152,24 @@
 				8EBAC9EF176EB491005CB4A1 /* ViewController.h */,
 				8EBAC9F0176EB491005CB4A1 /* ViewController.m */,
 				8EBAC9DB176EB491005CB4A1 /* Supporting Files */,
+				8EDB7B711774FF900024EF3E /* loginViewController.h */,
+				8EDB7B721774FF900024EF3E /* loginViewController.m */,
+				8EBACA191770F9CA005CB4A1 /* test2Segues.h */,
+				8EBACA1A1770F9CA005CB4A1 /* test2Segues.m */,
+				8EBACA28177244EE005CB4A1 /* PrayerCell.h */,
+				8EBACA29177244EE005CB4A1 /* PrayerCell.m */,
+				8EB0109C17724D37000439D3 /* prayerTable.h */,
+				8EB0109D17724D37000439D3 /* prayerTable.m */,
+				8EDB7B7D177B3CE10024EF3E /* praiseTable.h */,
+				8EDB7B7E177B3CE10024EF3E /* praiseTable.m */,
+				8EDB7B74177934760024EF3E /* SubmitPrayerViewController.h */,
+				8EDB7B75177934760024EF3E /* SubmitPrayerViewController.m */,
+				8EDB7B77177934940024EF3E /* SubmitPraiseViewController.h */,
+				8EDB7B78177934940024EF3E /* SubmitPraiseViewController.m */,
+				8EDB7B7A177A350F0024EF3E /* PrayerDetailViewController.h */,
+				8EDB7B7B177A350F0024EF3E /* PrayerDetailViewController.m */,
+				8EDB7B80177B3D010024EF3E /* praiseCell.h */,
+				8EDB7B81177B3D010024EF3E /* praiseCell.m */,
 			);
 			path = test2;
 			sourceTree = "<group>";
@@ -101,7 +182,25 @@
 				8EBAC9E0176EB491005CB4A1 /* main.m */,
 				8EBAC9E2176EB491005CB4A1 /* test2-Prefix.pch */,
 				8EBAC9E6176EB491005CB4A1 /* Default.png */,
+				8EB010A217737FDF000439D3 /* titleBar.png */,
+				8EBAC9F91770F198005CB4A1 /* background.png */,
 				8EBAC9E8176EB491005CB4A1 /* Default@2x.png */,
+				8EBAC9FB1770F2EA005CB4A1 /* background@2x.png */,
+				8EB010A41773A62D000439D3 /* prayingIcon.png */,
+				8EBAC9FC1770F2EA005CB4A1 /* button_separator.png */,
+				8EBAC9FD1770F2EA005CB4A1 /* button_separator@2x.png */,
+				8EBAC9FE1770F2EA005CB4A1 /* cogs_highlighted.png */,
+				8EBAC9FF1770F2EA005CB4A1 /* cogs_highlighted@2x.png */,
+				8EBACA001770F2EA005CB4A1 /* cogs.png */,
+				8EBACA011770F2EA005CB4A1 /* cogs@2x.png */,
+				8EBACA021770F2EA005CB4A1 /* heart_highlighted.png */,
+				8EBACA031770F2EA005CB4A1 /* heart_highlighted@2x.png */,
+				8EBACA041770F2EA005CB4A1 /* heart.png */,
+				8EBACA051770F2EA005CB4A1 /* heart@2x.png */,
+				8EBACA061770F2EA005CB4A1 /* home_highlighted.png */,
+				8EBACA071770F2EA005CB4A1 /* home_highlighted@2x.png */,
+				8EBACA081770F2EA005CB4A1 /* home.png */,
+				8EBACA091770F2EA005CB4A1 /* home@2x.png */,
 				8EBAC9EA176EB491005CB4A1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
@@ -163,6 +262,24 @@
 				8EBAC9E9176EB491005CB4A1 /* Default@2x.png in Resources */,
 				8EBAC9EB176EB491005CB4A1 /* Default-568h@2x.png in Resources */,
 				8EBAC9EE176EB491005CB4A1 /* MainStoryboard.storyboard in Resources */,
+				8EBAC9FA1770F198005CB4A1 /* background.png in Resources */,
+				8EBACA0A1770F2EA005CB4A1 /* background@2x.png in Resources */,
+				8EBACA0B1770F2EA005CB4A1 /* button_separator.png in Resources */,
+				8EBACA0C1770F2EA005CB4A1 /* button_separator@2x.png in Resources */,
+				8EBACA0D1770F2EA005CB4A1 /* cogs_highlighted.png in Resources */,
+				8EBACA0E1770F2EA005CB4A1 /* cogs_highlighted@2x.png in Resources */,
+				8EBACA0F1770F2EA005CB4A1 /* cogs.png in Resources */,
+				8EBACA101770F2EA005CB4A1 /* cogs@2x.png in Resources */,
+				8EBACA111770F2EA005CB4A1 /* heart_highlighted.png in Resources */,
+				8EBACA121770F2EA005CB4A1 /* heart_highlighted@2x.png in Resources */,
+				8EBACA131770F2EA005CB4A1 /* heart.png in Resources */,
+				8EBACA141770F2EA005CB4A1 /* heart@2x.png in Resources */,
+				8EBACA151770F2EA005CB4A1 /* home_highlighted.png in Resources */,
+				8EBACA161770F2EA005CB4A1 /* home_highlighted@2x.png in Resources */,
+				8EBACA171770F2EA005CB4A1 /* home.png in Resources */,
+				8EBACA181770F2EA005CB4A1 /* home@2x.png in Resources */,
+				8EB010A317737FDF000439D3 /* titleBar.png in Resources */,
+				8EB010A51773A62D000439D3 /* prayingIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +293,15 @@
 				8EBAC9E1176EB491005CB4A1 /* main.m in Sources */,
 				8EBAC9E5176EB491005CB4A1 /* AppDelegate.m in Sources */,
 				8EBAC9F1176EB491005CB4A1 /* ViewController.m in Sources */,
+				8EBACA1B1770F9CA005CB4A1 /* test2Segues.m in Sources */,
+				8EBACA2A177244EE005CB4A1 /* PrayerCell.m in Sources */,
+				8EB0109E17724D37000439D3 /* prayerTable.m in Sources */,
+				8EDB7B731774FF900024EF3E /* loginViewController.m in Sources */,
+				8EDB7B76177934760024EF3E /* SubmitPrayerViewController.m in Sources */,
+				8EDB7B79177934940024EF3E /* SubmitPraiseViewController.m in Sources */,
+				8EDB7B7C177A350F0024EF3E /* PrayerDetailViewController.m in Sources */,
+				8EDB7B7F177B3CE10024EF3E /* praiseTable.m in Sources */,
+				8EDB7B82177B3D010024EF3E /* praiseCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +424,7 @@
 				8EBAC9F6176EB491005CB4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
