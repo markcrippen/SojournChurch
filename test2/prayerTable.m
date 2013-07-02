@@ -30,9 +30,7 @@
 {
     [super viewDidLoad];
 
-   // myarray = [NSMutableArray arrayWithObjects:@"Mark",@"Test",@"Tester2",@"Christi", @"Mark",@"Test",@"Tester2",@"Christi", @"Mark",@"Test",@"Tester2",@"Christi", nil];
     
-    NSLog(@"view did load");
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = YES;
     

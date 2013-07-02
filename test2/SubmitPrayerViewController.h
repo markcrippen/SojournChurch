@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface SubmitPrayerViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *prayerRequest;
+
+@property (weak, nonatomic) IBOutlet UITextView *prayerRequest;
+
+
+- (IBAction)requestTypeButton:(UISegmentedControl *)sender;
+
 
 - (IBAction)anonPlug:(UISwitch *)sender;
 
-
-@property (weak, nonatomic) IBOutlet UISlider *urgencySlider;
 - (IBAction)exitButton:(UIButton *)sender;
 - (IBAction)submitButton:(id)sender;
 

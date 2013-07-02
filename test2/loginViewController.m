@@ -14,6 +14,7 @@
 
 @implementation loginViewController
 @synthesize userName,passWord;
+NSString *serverAck;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -40,6 +41,9 @@
 - (IBAction)loginButton:(id)sender {
     [self.userName resignFirstResponder];
     [self.passWord resignFirstResponder];
+    
+    //serverAck = @"Success";
+    
    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSLog(@"%@", userName.text);
     
@@ -56,14 +60,17 @@
     // Set Request Body
     [request setHTTPBody: myRequestData];
     // Now send a request and get Response
-    NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse: nil error: nil];
+    
+    
+    NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse:nil error: nil];
     // Log Response
     NSString *response = [[NSString alloc] initWithBytes:[returnData bytes] length:[returnData length] encoding:NSUTF8StringEncoding];
     NSLog(@"%@",response);
+    serverAck = response;
     
 
     //need to create if statement
-    if ([response isEqualToString:@"success"]) {
+    if ([serverAck isEqualToString:@"Success"]) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Logged In" message:@"You have been logged in" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         [alertView show];
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

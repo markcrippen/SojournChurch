@@ -38,7 +38,7 @@
     
     
     self.dateLable.text = self.detailDateText;
-    self.dateLable.preferredMaxLayoutWidth = 150.0f;
+    self.dateLable.preferredMaxLayoutWidth = 175.0f;
     self.dateLable.numberOfLines = 1;
     
     

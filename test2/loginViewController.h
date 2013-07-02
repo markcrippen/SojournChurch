@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface loginViewController : UIViewController
+{
+    NSMutableData *responseData;
+}
+
+
+
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *passWord;
+
 - (IBAction)loginButton:(id)sender;
 - (IBAction)backButton:(UIButton *)sender;
 - (IBAction)prayButton:(id)sender;
