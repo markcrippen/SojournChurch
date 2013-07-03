@@ -14,7 +14,6 @@
 
 @implementation loginViewController
 @synthesize userName,passWord;
-NSString *serverAck;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,10 +41,9 @@ NSString *serverAck;
     [self.userName resignFirstResponder];
     [self.passWord resignFirstResponder];
     
-    //serverAck = @"Success";
     
    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    NSLog(@"%@", userName.text);
+    
     
     // Create your request string with parameter name as defined in PHP file
     NSString *myRequestString = [NSString stringWithFormat:@"username=%@&password=%@",userName.text, passWord.text];
@@ -64,18 +62,26 @@ NSString *serverAck;
     
     NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse:nil error: nil];
     // Log Response
-    NSString *response = [[NSString alloc] initWithBytes:[returnData bytes] length:[returnData length] encoding:NSUTF8StringEncoding];
+    NSString *response = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
     NSLog(@"%@",response);
-    serverAck = response;
     
+    response = [response stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
     //need to create if statement
-    if ([serverAck isEqualToString:@"Success"]) {
+    if ([response isEqualToString:@"Logged In"]) {
+        NSLog(@"%@",response);
+        [[NSUserDefaults standardUserDefaults] setObject:userName.text forKey:@"loginCheck"];
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Logged In" message:@"You have been logged in" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         [alertView show];
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    else{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"UH-OH" message:@"Your Username and/or password are not correct" delegate:nil cancelButtonTitle:@"Try Again" otherButtonTitles:nil];
+        [alertView show];
 
+        NSLog(@"hit the else: %@", response);
     }
     
 }
