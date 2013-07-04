@@ -16,6 +16,7 @@
 
 NSString *name;
 NSNumber *segValue;
+NSString *dName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -73,14 +74,12 @@ NSNumber *segValue;
     
     [self.prayerRequest resignFirstResponder];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-      name = @"Test";
-    
+      name  = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"];
+        dName = @"displayTest";
     
     // Create your request string with parameter name as defined in PHP file
-    NSString *myRequestString = [NSString stringWithFormat:@"request=%@&name=%@", self.prayerRequest.text, name];
-   
-    
-    
+    NSString *myRequestString = [NSString stringWithFormat:@"request=%@&name=%@&displayname=%@", self.prayerRequest.text, name,dName];
+
     
     // Create Data from request
     NSData *myRequestData = [NSData dataWithBytes: [myRequestString UTF8String] length: [myRequestString length]];

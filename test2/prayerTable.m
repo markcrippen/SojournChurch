@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    NSLog(@"View did load!");
     
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = YES;
@@ -57,6 +57,8 @@
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     news = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
+    NSLog(@"%@", news);
+    
     [MyTableView reloadData];
 }
 
