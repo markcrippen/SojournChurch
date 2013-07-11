@@ -61,24 +61,36 @@ NSString *dName;
 }
 
 - (IBAction)anonPlug:(UISwitch *)sender {
-    //if (!anonPlug){
-      //  name = @"HardCoded Test";
-    //}
+    if (_anonPlug.on){
+        NSLog(@"Anonplug is on");
+        dName = @"Anonymous";
+        
+    }
+    else{
+        
+      dName = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"];
+        
+    }
 }
 - (IBAction)exitButton:(UIButton *)sender {
     
     [self.prayerRequest resignFirstResponder];
+    [self.titleField resignFirstResponder];
+    
 }
 
 - (IBAction)submitButton:(id)sender {
-    
+    //I need to add a statement that will check if user is logged in
+    //if not logged in, load the window to login, else continue
+    [self.titleField resignFirstResponder];
     [self.prayerRequest resignFirstResponder];
+    
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
       name  = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"];
-        dName = @"displayTest";
+        
     
     // Create your request string with parameter name as defined in PHP file
-    NSString *myRequestString = [NSString stringWithFormat:@"request=%@&name=%@&displayname=%@", self.prayerRequest.text, name,dName];
+    NSString *myRequestString = [NSString stringWithFormat:@"request=%@&name=%@&displayname=%@&title=%@", self.prayerRequest.text, name,dName, self.titleField.text];
 
     
     // Create Data from request
@@ -100,10 +112,27 @@ NSString *dName;
         NSString *response = [[NSString alloc] initWithBytes:[returnData bytes] length:[returnData length] encoding:NSUTF8StringEncoding];
         NSLog(@"%@",response);
         
+        response = [response stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        if ([response isEqualToString:@"1 record added"]) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Record has been added" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            [alertView show];
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+        
+        else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"UH OH" message:response delegate:nil cancelButtonTitle:@"Try Again" otherButtonTitles:nil];
+            [alertView show];
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            
+        }
+
+        
     }
     else{
-        /*
-         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString: @"http://sojourn.markcrippen.com/createrequest.php"]];
+        
+         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString: @"http://sojourn.markcrippen.com/createPraise.php"]];
         // set Request Type
         [request setHTTPMethod: @"POST"];
         // Set content-type
@@ -111,28 +140,29 @@ NSString *dName;
         // Set Request Body
         [request setHTTPBody: myRequestData];
         // Now send a request and get Response
-        // NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse: nil error: nil];
+         NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse: nil error: nil];
         // Log Response
-        //NSString *response = [[NSString alloc] initWithBytes:[returnData bytes] length:[returnData length] encoding:NSUTF8StringEncoding];
-        //NSLog(@"%@",response);
-        */
+        NSString *response = [[NSString alloc] initWithBytes:[returnData bytes] length:[returnData length] encoding:NSUTF8StringEncoding];
+        NSLog(@" server response is: %@",response);
+       
+        response = [response stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+            if ([response isEqualToString:@"1 record added"]) {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Record has been added" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+                [alertView show];
+                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+        
+            else{
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"UH OH" message:response delegate:nil cancelButtonTitle:@"Try Again" otherButtonTitles:nil];
+                [alertView show];
+                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                
+            }
+
         
     }
         
-   
-    //else change the url to the submitPraise
-    
-   
-    
-    /*
-    //need to create if statement
-    if ([response isEqualToString:@"success"]) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Logged In" message:@"You have been logged in" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-        [alertView show];
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        [self dismissViewControllerAnimated:YES completion:nil];
-        */
-    
-    //}
-}
+    }
 @end

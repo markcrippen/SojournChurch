@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E0E47711784C3F30058DCD0 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E47701784C3F30058DCD0 /* RegisterViewController.m */; };
+		8E0E47751785ED490058DCD0 /* bluebubbles.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0E47741785ED490058DCD0 /* bluebubbles.png */; };
+		8EAFBF53178DF7300037FAFF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAFBF52178DF7300037FAFF /* Default@2x.png */; };
 		8EB0109E17724D37000439D3 /* prayerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB0109D17724D37000439D3 /* prayerTable.m */; };
 		8EB010A317737FDF000439D3 /* titleBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB010A217737FDF000439D3 /* titleBar.png */; };
 		8EB010A51773A62D000439D3 /* prayingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB010A41773A62D000439D3 /* prayingIcon.png */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		8E0E476F1784C3F30058DCD0 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		8E0E47701784C3F30058DCD0 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		8E0E47741785ED490058DCD0 /* bluebubbles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluebubbles.png; sourceTree = "<group>"; };
+		8EAFBF52178DF7300037FAFF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8EB0109C17724D37000439D3 /* prayerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prayerTable.h; sourceTree = "<group>"; };
 		8EB0109D17724D37000439D3 /* prayerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prayerTable.m; sourceTree = "<group>"; };
 		8EB010A217737FDF000439D3 /* titleBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = titleBar.png; path = ../../titleBar.png; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		8EBAC9C8176EB491005CB4A1 = {
 			isa = PBXGroup;
 			children = (
+				8EAFBF52178DF7300037FAFF /* Default@2x.png */,
 				8EBAC9DA176EB491005CB4A1 /* test2 */,
 				8EBAC9D3176EB491005CB4A1 /* Frameworks */,
 				8EBAC9D2176EB491005CB4A1 /* Products */,
@@ -158,18 +163,18 @@
 				8E0E47701784C3F30058DCD0 /* RegisterViewController.m */,
 				8EBACA191770F9CA005CB4A1 /* test2Segues.h */,
 				8EBACA1A1770F9CA005CB4A1 /* test2Segues.m */,
+				8EDB7B7A177A350F0024EF3E /* PrayerDetailViewController.h */,
+				8EDB7B7B177A350F0024EF3E /* PrayerDetailViewController.m */,
 				8EBACA28177244EE005CB4A1 /* PrayerCell.h */,
 				8EBACA29177244EE005CB4A1 /* PrayerCell.m */,
 				8EB0109C17724D37000439D3 /* prayerTable.h */,
 				8EB0109D17724D37000439D3 /* prayerTable.m */,
+				8EDB7B80177B3D010024EF3E /* praiseCell.h */,
+				8EDB7B81177B3D010024EF3E /* praiseCell.m */,
 				8EDB7B7D177B3CE10024EF3E /* praiseTable.h */,
 				8EDB7B7E177B3CE10024EF3E /* praiseTable.m */,
 				8EDB7B74177934760024EF3E /* SubmitPrayerViewController.h */,
 				8EDB7B75177934760024EF3E /* SubmitPrayerViewController.m */,
-				8EDB7B7A177A350F0024EF3E /* PrayerDetailViewController.h */,
-				8EDB7B7B177A350F0024EF3E /* PrayerDetailViewController.m */,
-				8EDB7B80177B3D010024EF3E /* praiseCell.h */,
-				8EDB7B81177B3D010024EF3E /* praiseCell.m */,
 			);
 			path = test2;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				8EBAC9DD176EB491005CB4A1 /* InfoPlist.strings */,
 				8EBAC9E0176EB491005CB4A1 /* main.m */,
 				8EBAC9E2176EB491005CB4A1 /* test2-Prefix.pch */,
+				8E0E47741785ED490058DCD0 /* bluebubbles.png */,
 				8EBAC9E6176EB491005CB4A1 /* Default.png */,
 				8EB010A217737FDF000439D3 /* titleBar.png */,
 				8EBAC9F91770F198005CB4A1 /* background.png */,
@@ -280,6 +286,8 @@
 				8EBACA181770F2EA005CB4A1 /* home@2x.png in Resources */,
 				8EB010A317737FDF000439D3 /* titleBar.png in Resources */,
 				8EB010A51773A62D000439D3 /* prayingIcon.png in Resources */,
+				8E0E47751785ED490058DCD0 /* bluebubbles.png in Resources */,
+				8EAFBF53178DF7300037FAFF /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

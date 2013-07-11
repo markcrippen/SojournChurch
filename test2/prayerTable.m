@@ -116,7 +116,7 @@
     cell.priority.text = [[news objectAtIndex:indexPath.row]objectForKey:@"priority"];
     cell.dateTime.text = [[news objectAtIndex:indexPath.row] objectForKey:@"datetime"];
     cell.numPraying.text = @"2 praying";
-    cell.requestPreview.text = [[news objectAtIndex:indexPath.row] objectForKey:@"request"];
+    cell.requestPreview.text = [[news objectAtIndex:indexPath.row] objectForKey:@"title"];
     
     return cell;
 }
@@ -171,6 +171,7 @@
     detail.detailText = [[news objectAtIndex:indexPath.row] objectForKey:@"request"];
     detail.detailNameText = [[news objectAtIndex:indexPath.row] objectForKey:@"displayname"];
     detail.detailDateText= [[news objectAtIndex:indexPath.row] objectForKey:@"datetime"];
+    detail.detailTitle = [[news objectAtIndex:indexPath.row] objectForKey:@"title"];
     
     
     //detail.detailTextLabel = [[NSString stringWithFormat:[news objectAtIndex:indexPath.row]]];

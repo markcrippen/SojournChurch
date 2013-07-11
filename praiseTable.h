@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface praiseTable : UITableViewController
+{
+    
 
+    IBOutlet UITableView *MyTableView;
+    NSMutableArray *myarray;
+    NSArray *praiseArray;
+    NSMutableData *data;
+    
+}
 
 @end

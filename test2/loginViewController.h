@@ -20,6 +20,6 @@
 
 - (IBAction)loginButton:(id)sender;
 - (IBAction)backButton:(UIButton *)sender;
-- (IBAction)prayButton:(id)sender;
+
 
 @end

@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface SubmitPrayerViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *titleField;
 
 @property (weak, nonatomic) IBOutlet UITextView *prayerRequest;
 
+@property (weak, nonatomic) IBOutlet UISwitch *anonPlug;
 
 - (IBAction)requestTypeButton:(UISegmentedControl *)sender;
 

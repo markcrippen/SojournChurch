@@ -7,6 +7,7 @@
 //
 
 #import "praiseTable.h"
+#import "praiseCell.h"
 
 @interface praiseTable ()
 
@@ -26,15 +27,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSLog(@"View did load!");
     
-
+    // Uncomment the following line to preserve selection between presentations.
+    self.clearsSelectionOnViewWillAppear = YES;
+    
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    NSURL *url = [NSURL URLWithString:@"http://sojourn.markcrippen.com/praisewall.php"];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    data = [[NSMutableData alloc] init];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)theData
+{
+    [data appendData:theData];
+    
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    praiseArray = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
+    NSLog(@"%@", praiseArray);
+    
+    [MyTableView reloadData];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)loadError
+{
+    UIAlertView *errorView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Sorry this didnt work for you, please try again" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+    [errorView show];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    
+    
+}
+
+    
 
 - (void)didReceiveMemoryWarning
 {
@@ -46,24 +81,32 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return [praiseArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    praiseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"praiseCell"];
     
-    // Configure the cell...
+    NSLog(@"tableview frame %@", NSStringFromCGRect(tableView.frame));
+    
+    if (cell == nil) {
+        NSLog(@"cell is Nil");
+        cell = [[praiseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"praiseCell"];
+    }
+    
+    cell.name.text = [[praiseArray objectAtIndex:indexPath.row] objectForKey:@"displayname"];
+    cell.praiseDate.text = [[praiseArray objectAtIndex:indexPath.row] objectForKey:@"dateTime"];
+    cell.praiseTitle.text = [[praiseArray objectAtIndex:indexPath.row] objectForKey:@"title"];
     
     return cell;
 }
