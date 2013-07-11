@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E0E47711784C3F30058DCD0 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E47701784C3F30058DCD0 /* RegisterViewController.m */; };
-		8E0E47751785ED490058DCD0 /* bluebubbles.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0E47741785ED490058DCD0 /* bluebubbles.png */; };
 		8EAFBF53178DF7300037FAFF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAFBF52178DF7300037FAFF /* Default@2x.png */; };
 		8EB0109E17724D37000439D3 /* prayerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB0109D17724D37000439D3 /* prayerTable.m */; };
-		8EB010A317737FDF000439D3 /* titleBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB010A217737FDF000439D3 /* titleBar.png */; };
 		8EB010A51773A62D000439D3 /* prayingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB010A41773A62D000439D3 /* prayingIcon.png */; };
 		8EBAC9D5176EB491005CB4A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D4176EB491005CB4A1 /* UIKit.framework */; };
 		8EBAC9D7176EB491005CB4A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D6176EB491005CB4A1 /* Foundation.framework */; };
@@ -42,6 +40,8 @@
 		8EBACA181770F2EA005CB4A1 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBACA091770F2EA005CB4A1 /* home@2x.png */; };
 		8EBACA1B1770F9CA005CB4A1 /* test2Segues.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBACA1A1770F9CA005CB4A1 /* test2Segues.m */; };
 		8EBACA2A177244EE005CB4A1 /* PrayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBACA29177244EE005CB4A1 /* PrayerCell.m */; };
+		8EC9EBDD178F1CAD00602047 /* navbar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9EBDC178F1CAD00602047 /* navbar_bg.png */; };
+		8EC9EBDF178F1CBE00602047 /* navbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9EBDE178F1CBE00602047 /* navbar_bg@2x.png */; };
 		8EDB7B731774FF900024EF3E /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB7B721774FF900024EF3E /* loginViewController.m */; };
 		8EDB7B76177934760024EF3E /* SubmitPrayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB7B75177934760024EF3E /* SubmitPrayerViewController.m */; };
 		8EDB7B7C177A350F0024EF3E /* PrayerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB7B7B177A350F0024EF3E /* PrayerDetailViewController.m */; };
@@ -52,11 +52,9 @@
 /* Begin PBXFileReference section */
 		8E0E476F1784C3F30058DCD0 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		8E0E47701784C3F30058DCD0 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		8E0E47741785ED490058DCD0 /* bluebubbles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluebubbles.png; sourceTree = "<group>"; };
-		8EAFBF52178DF7300037FAFF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8EAFBF52178DF7300037FAFF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		8EB0109C17724D37000439D3 /* prayerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prayerTable.h; sourceTree = "<group>"; };
 		8EB0109D17724D37000439D3 /* prayerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prayerTable.m; sourceTree = "<group>"; };
-		8EB010A217737FDF000439D3 /* titleBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = titleBar.png; path = ../../titleBar.png; sourceTree = "<group>"; };
 		8EB010A41773A62D000439D3 /* prayingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prayingIcon.png; path = images/prayingIcon.png; sourceTree = "<group>"; };
 		8EBAC9D1176EB491005CB4A1 /* test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBAC9D4176EB491005CB4A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -94,6 +92,8 @@
 		8EBACA1A1770F9CA005CB4A1 /* test2Segues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test2Segues.m; sourceTree = "<group>"; };
 		8EBACA28177244EE005CB4A1 /* PrayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayerCell.h; sourceTree = "<group>"; };
 		8EBACA29177244EE005CB4A1 /* PrayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerCell.m; sourceTree = "<group>"; };
+		8EC9EBDC178F1CAD00602047 /* navbar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_bg.png; sourceTree = "<group>"; };
+		8EC9EBDE178F1CBE00602047 /* navbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_bg@2x.png"; sourceTree = "<group>"; };
 		8EDB7B711774FF900024EF3E /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		8EDB7B721774FF900024EF3E /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		8EDB7B74177934760024EF3E /* SubmitPrayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitPrayerViewController.h; sourceTree = "<group>"; };
@@ -123,7 +123,6 @@
 		8EBAC9C8176EB491005CB4A1 = {
 			isa = PBXGroup;
 			children = (
-				8EAFBF52178DF7300037FAFF /* Default@2x.png */,
 				8EBAC9DA176EB491005CB4A1 /* test2 */,
 				8EBAC9D3176EB491005CB4A1 /* Frameworks */,
 				8EBAC9D2176EB491005CB4A1 /* Products */,
@@ -186,9 +185,10 @@
 				8EBAC9DD176EB491005CB4A1 /* InfoPlist.strings */,
 				8EBAC9E0176EB491005CB4A1 /* main.m */,
 				8EBAC9E2176EB491005CB4A1 /* test2-Prefix.pch */,
-				8E0E47741785ED490058DCD0 /* bluebubbles.png */,
+				8EAFBF52178DF7300037FAFF /* Default@2x.png */,
 				8EBAC9E6176EB491005CB4A1 /* Default.png */,
-				8EB010A217737FDF000439D3 /* titleBar.png */,
+				8EC9EBDC178F1CAD00602047 /* navbar_bg.png */,
+				8EC9EBDE178F1CBE00602047 /* navbar_bg@2x.png */,
 				8EBAC9F91770F198005CB4A1 /* background.png */,
 				8EBAC9E8176EB491005CB4A1 /* Default@2x.png */,
 				8EBAC9FB1770F2EA005CB4A1 /* background@2x.png */,
@@ -284,10 +284,10 @@
 				8EBACA161770F2EA005CB4A1 /* home_highlighted@2x.png in Resources */,
 				8EBACA171770F2EA005CB4A1 /* home.png in Resources */,
 				8EBACA181770F2EA005CB4A1 /* home@2x.png in Resources */,
-				8EB010A317737FDF000439D3 /* titleBar.png in Resources */,
 				8EB010A51773A62D000439D3 /* prayingIcon.png in Resources */,
-				8E0E47751785ED490058DCD0 /* bluebubbles.png in Resources */,
 				8EAFBF53178DF7300037FAFF /* Default@2x.png in Resources */,
+				8EC9EBDD178F1CAD00602047 /* navbar_bg.png in Resources */,
+				8EC9EBDF178F1CBE00602047 /* navbar_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

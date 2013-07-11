@@ -31,6 +31,22 @@ NSString *dName;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn.frame = CGRectMake(20,400,88,35); //The position and size of the button (x,y,width,height)
+    [btn setTitle:@"Quit" forState:UIControlStateNormal];
+    [btn addTarget:self
+            action:@selector(showAbout)
+  forControlEvents:(UIControlEvents)UIControlEventTouchUpInside];
+    //[[self navigationItem] setRightBarButtonItem:btn];
+    [self.view addSubview:btn];
+    
+    
+}
+-(void)showAbout
+{
+    NSLog(@"dynamic button was fired");
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,6 +88,7 @@ NSString *dName;
         
     }
 }
+
 - (IBAction)exitButton:(UIButton *)sender {
     
     [self.prayerRequest resignFirstResponder];

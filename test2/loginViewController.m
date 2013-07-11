@@ -70,7 +70,8 @@
     //need to create if statement
     if ([response isEqualToString:@"Logged In"]) {
         NSLog(@"%@",response);
-        [[NSUserDefaults standardUserDefaults] setObject:userName.text forKey:@"loginCheck"];
+        [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"loginCheck"];
+        [[NSUserDefaults standardUserDefaults] setObject:userName.text forKey:@"loginName"];
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Logged In" message:@"You have been logged in" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         [alertView show];
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

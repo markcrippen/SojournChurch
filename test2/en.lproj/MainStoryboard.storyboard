@@ -9,7 +9,7 @@
             <objects>
                 <viewController autoresizesArchivedViewToFullSize="NO" id="eBA-4j-cpU" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xNf-dd-F6Q">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atT-fW-lv0">
@@ -139,7 +139,7 @@
                     <connections>
                         <segue destination="Bmd-hO-VCO" kind="relationship" relationship="viewControllers" id="9Ca-Nk-IMq"/>
                         <segue destination="de3-O8-hCj" kind="relationship" relationship="viewControllers" id="zDu-xZ-tiK"/>
-                        <segue destination="bMw-sf-U3v" kind="relationship" relationship="viewControllers" id="jbS-VJ-RFb"/>
+                        <segue destination="QCS-Ph-UNu" kind="relationship" relationship="viewControllers" id="sxO-eb-B3R"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4FY-DS-m75" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,7 +167,7 @@
             <objects>
                 <tableViewController id="Dfi-dB-nTJ" customClass="prayerTable" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="98" sectionHeaderHeight="22" sectionFooterHeight="22" id="QMs-iW-HzY">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -264,14 +264,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HI0-QA-wDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101" y="1829"/>
+            <point key="canvasLocation" x="105" y="1993"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="g18-Ot-iTA">
             <objects>
                 <viewController storyboardIdentifier="loginViewController" id="uGj-1C-0gF" customClass="loginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xft-EM-VXY">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SuperSojourn2000" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="R2x-x0-PYd">
@@ -377,14 +377,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xen-qQ-b1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="2472"/>
+            <point key="canvasLocation" x="587" y="2684"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="wrK-m2-WRu">
             <objects>
                 <viewController id="WL7-Zm-2YF" customClass="RegisterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zDG-bQ-cdZ">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button alpha="0.10000000000000014" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNB-s2-eUj">
@@ -547,14 +547,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niC-Ax-CWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="2444"/>
+            <point key="canvasLocation" x="1238" y="2684"/>
         </scene>
         <!--Prayer Detail View Controller - prayerDetail-->
         <scene sceneID="1NG-g0-LJR">
             <objects>
                 <viewController storyboardIdentifier="PrayerDetailViewController" title="prayerDetail" wantsFullScreenLayout="YES" definesPresentationContext="YES" modalTransitionStyle="crossDissolve" id="Ltn-NQ-yTH" customClass="PrayerDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hHR-Gg-ncf">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUO-Pg-Egb">
@@ -668,7 +668,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="REd-Ju-6d8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="1701"/>
+            <point key="canvasLocation" x="568" y="1977"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="q2Q-V2-Zkc">
@@ -691,7 +691,7 @@
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="bMw-sf-U3v" customClass="SubmitPrayerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JEr-Jh-Vpy">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALm-xB-wm8">
@@ -743,6 +743,9 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6hM-z7-Qml">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="AFr-tX-rXH"/>
+                                </constraints>
                                 <segments>
                                     <segment title="praise report"/>
                                     <segment title="prayer request"/>
@@ -755,7 +758,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIA-Fj-8Sh">
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="2nt-56-0pb"/>
+                                    <constraint firstAttribute="width" constant="240" id="8Nj-VI-7lB"/>
                                     <constraint firstAttribute="height" constant="152" id="hqb-pQ-u7T"/>
                                 </constraints>
                                 <attributedString key="attributedText">
@@ -785,24 +788,26 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="bWc-b6-mdv" secondAttribute="bottom" constant="61" id="2Iv-iv-uXd"/>
-                            <constraint firstItem="ALm-xB-wm8" firstAttribute="centerX" secondItem="AUB-KV-Lbr" secondAttribute="centerX" type="default" id="5lH-v3-uNU"/>
-                            <constraint firstItem="HzX-6y-NNi" firstAttribute="trailing" secondItem="AUB-KV-Lbr" secondAttribute="trailing" type="default" id="86q-nt-zzj"/>
-                            <constraint firstItem="GIA-Fj-8Sh" firstAttribute="centerX" secondItem="JEr-Jh-Vpy" secondAttribute="centerX" type="default" id="HlP-5j-0I5"/>
-                            <constraint firstItem="bWc-b6-mdv" firstAttribute="centerY" secondItem="6hM-z7-Qml" secondAttribute="centerY" type="default" id="Pxf-dZ-Dbh"/>
-                            <constraint firstItem="GIA-Fj-8Sh" firstAttribute="top" secondItem="AUB-KV-Lbr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QCG-eI-A5v"/>
-                            <constraint firstItem="HzX-6y-NNi" firstAttribute="centerY" secondItem="VNk-uS-DHx" secondAttribute="centerY" type="default" id="YVc-KJ-SHC"/>
-                            <constraint firstAttribute="bottom" secondItem="HzX-6y-NNi" secondAttribute="bottom" constant="126" id="Yfj-DF-Xxd"/>
+                            <constraint firstItem="GIA-Fj-8Sh" firstAttribute="leading" secondItem="VNk-uS-DHx" secondAttribute="leading" type="default" id="79q-u4-G8M"/>
+                            <constraint firstItem="GIA-Fj-8Sh" firstAttribute="centerX" secondItem="JEr-Jh-Vpy" secondAttribute="centerX" type="default" id="KXa-HL-ORy"/>
+                            <constraint firstAttribute="trailing" secondItem="HzX-6y-NNi" secondAttribute="trailing" constant="52" id="Vlp-mI-cs5"/>
+                            <constraint firstItem="AUB-KV-Lbr" firstAttribute="top" secondItem="JEr-Jh-Vpy" secondAttribute="top" constant="31" id="WSe-uo-Yqc"/>
+                            <constraint firstItem="GIA-Fj-8Sh" firstAttribute="top" secondItem="JEr-Jh-Vpy" secondAttribute="top" constant="66" id="cGd-Sf-xkx"/>
                             <constraint firstItem="ALm-xB-wm8" firstAttribute="top" secondItem="JEr-Jh-Vpy" secondAttribute="top" constant="8" id="cac-UC-ZZw"/>
+                            <constraint firstAttribute="bottom" secondItem="bWc-b6-mdv" secondAttribute="bottom" constant="27" id="cja-Om-7R5"/>
+                            <constraint firstAttribute="bottom" secondItem="HzX-6y-NNi" secondAttribute="bottom" constant="96" id="h9H-hL-3N5"/>
                             <constraint firstItem="ALm-xB-wm8" firstAttribute="leading" secondItem="JEr-Jh-Vpy" secondAttribute="leading" type="user" id="k4C-tI-cV1"/>
+                            <constraint firstAttribute="bottom" secondItem="6hM-z7-Qml" secondAttribute="bottom" constant="33" id="m4F-sS-vio"/>
                             <constraint firstItem="bWc-b6-mdv" firstAttribute="leading" secondItem="JEr-Jh-Vpy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="m9U-2L-Kyu"/>
-                            <constraint firstItem="VNk-uS-DHx" firstAttribute="leading" secondItem="GIA-Fj-8Sh" secondAttribute="leading" type="default" id="msv-Tu-Hst"/>
                             <constraint firstItem="bWc-b6-mdv" firstAttribute="baseline" secondItem="6hM-z7-Qml" secondAttribute="baseline" type="user" id="rlj-nP-lp5"/>
-                            <constraint firstItem="AUB-KV-Lbr" firstAttribute="top" secondItem="JEr-Jh-Vpy" secondAttribute="top" constant="53" id="vfA-u1-s9l"/>
+                            <constraint firstItem="AUB-KV-Lbr" firstAttribute="leading" secondItem="JEr-Jh-Vpy" secondAttribute="leading" constant="38" id="tW1-TW-2uA"/>
+                            <constraint firstItem="HzX-6y-NNi" firstAttribute="centerY" secondItem="VNk-uS-DHx" secondAttribute="centerY" type="default" id="uPo-Bp-N0l"/>
                             <constraint firstItem="ALm-xB-wm8" firstAttribute="trailing" secondItem="6hM-z7-Qml" secondAttribute="trailing" type="user" id="viq-Uy-wMu"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="jTj-kD-wJ1"/>
+                    <navigationItem key="navigationItem" id="8xL-gk-JmD"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="anonPlug" destination="HzX-6y-NNi" id="IDJ-T6-cYh"/>
                         <outlet property="prayerRequest" destination="GIA-Fj-8Sh" id="5fC-yi-yrE"/>
@@ -811,14 +816,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JC5-9z-eud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-365" y="629"/>
+            <point key="canvasLocation" x="113" y="608"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="IVX-1f-qeG">
+            <objects>
+                <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="QCS-Ph-UNu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="WE4-OO-ZY3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gDd-m7-D6Z">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="uLI-11-t0G">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="bMw-sf-U3v" kind="relationship" relationship="rootViewController" id="ENG-ti-DuJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PYi-aH-wNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="608"/>
         </scene>
         <!--Praise Table - Praise Wall-->
         <scene sceneID="6uP-1c-U5b">
             <objects>
                 <tableViewController id="6b8-NZ-pMw" customClass="praiseTable" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="102" sectionHeaderHeight="22" sectionFooterHeight="22" id="mAq-ew-FDR">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -885,7 +910,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRa-Q8-otO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96" y="1176"/>
+            <point key="canvasLocation" x="105" y="1317"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="dOk-WR-KQA">
@@ -1025,6 +1050,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
