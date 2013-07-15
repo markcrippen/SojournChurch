@@ -8,6 +8,8 @@
 
 #import "praiseTable.h"
 #import "praiseCell.h"
+#import "SWRevealViewController.h"
+
 
 @interface praiseTable ()
 
@@ -28,6 +30,16 @@
 {
     [super viewDidLoad];
     
+    _sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
+    
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    _sidebarButton.target = self.revealViewController;
+    _sidebarButton.action = @selector(revealToggle:);
+    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg"]];
     self.tableView.backgroundColor = [UIColor clearColor];
@@ -44,7 +56,28 @@
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh"];
+    [refresh addTarget:self
+                action:@selector(refreshMyTable:)
+      forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refresh;
+    
 }
+
+- (void)refreshMyTable:(UIRefreshControl *)refreshControl {
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating..."];
+    NSLog(@"refreshMyTable");
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    NSURL *url = [NSURL URLWithString:@"http://sojourn.markcrippen.com/praisewall.php"];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    [refreshControl endRefreshing];
+}
+
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {

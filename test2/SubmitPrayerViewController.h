@@ -9,18 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @interface SubmitPrayerViewController : UIViewController
+//outlets
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
-
 @property (weak, nonatomic) IBOutlet UITextView *prayerRequest;
-
 @property (weak, nonatomic) IBOutlet UISwitch *anonPlug;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *LoginNavButton;
 
-- (IBAction)requestTypeButton:(UISegmentedControl *)sender;
 
-
+//actions
 - (IBAction)anonPlug:(UISwitch *)sender;
-
+- (IBAction)requestTypeButton:(UISegmentedControl *)sender;
 - (IBAction)exitButton:(UIButton *)sender;
 - (IBAction)submitButton:(id)sender;
+- (IBAction)LoginButtonAction:(UIBarButtonItem *)sender;
 
 @end

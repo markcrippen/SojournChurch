@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *pass2;
 @property (weak, nonatomic) IBOutlet UITextField *churchName;
 
+
+
 - (IBAction)createUser:(id)sender;
 - (IBAction)exitButton:(id)sender;
 - (IBAction)clearKeyboard:(id)sender;
