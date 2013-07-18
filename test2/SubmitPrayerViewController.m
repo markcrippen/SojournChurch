@@ -9,6 +9,8 @@
 #import "SubmitPrayerViewController.h"
 #import "SWRevealViewController.h"
 #import "loginViewController.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface SubmitPrayerViewController ()
 
@@ -19,6 +21,7 @@
 NSString *name;
 NSNumber *segValue;
 NSString *dName;
+
 NSString *loginCheck;
 
 
@@ -36,6 +39,8 @@ NSString *loginCheck;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.title = @"Submit";
+    self.titleField.delegate = self;
+    
     //loginCheck = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"];
     
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
@@ -47,32 +52,57 @@ NSString *loginCheck;
    // _LoginNavButton.target = self.view;
    // _LoginNavButton.action = @selector(LoginButtonAction:);
     
+    _titleField.layer.cornerRadius=8.0f;
+    _titleField.layer.masksToBounds=YES;
+    _titleField.layer.borderColor=[[UIColor grayColor]CGColor];
+    _titleField.layer.borderWidth= 1.0f;
+    
+    _prayerRequest.layer.cornerRadius=8.0f;
+    _prayerRequest.layer.masksToBounds=YES;
+    _prayerRequest.layer.borderColor=[[UIColor clearColor]CGColor];
+    _prayerRequest.layer.borderWidth= 1.0f;
     
     if([[[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"] isEqualToString:@"yes"])
     {
-        
+
         _LoginNavButton.title = @"Log Out";
         
     }
     
-    
-    
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    
-   
-  
-   
-    
-    
+
 }
 
 
--(void)showAbout
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    //this handles the length of the textfield
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    return (newLength > 75) ? NO : YES; //nothing greater than 75 characters
+}
+
+// Implement the UITextFieldDelegate in the .h file
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    NSLog(@"dynamic button was fired");
+    if([textField.text length ] > 1){
+        textField.layer.borderColor=[[UIColor clearColor]CGColor];
+        [textField resignFirstResponder];
+        return YES;
+    }
+    
+    else{
+        textField.layer.cornerRadius=8.0f;
+        textField.layer.masksToBounds=YES;
+        textField.layer.borderColor=[[UIColor redColor]CGColor];
+        textField.layer.borderWidth= 1.0f;
+        return NO;
+    }
     
 }
+
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -121,11 +151,18 @@ NSString *loginCheck;
     
 }
 
+
+
+
 - (IBAction)submitButton:(id)sender {
     //I need to add a statement that will check if user is logged in
     //if not logged in, load the window to login, else continue
     [self.titleField resignFirstResponder];
     [self.prayerRequest resignFirstResponder];
+
+    if([dName isEqualToString:NULL]){
+        dName = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"];
+    }
     
     if([[[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"] isEqualToString:@"yes"]){
     
@@ -193,7 +230,8 @@ NSString *loginCheck;
                     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Record has been added" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
                     [alertView show];
                     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                    [self dismissViewControllerAnimated:YES completion:nil];
+                    self.titleField.text = @"";
+                    self.prayerRequest.text = @"";
                 }
         
                 else{
@@ -218,7 +256,7 @@ NSString *loginCheck;
         NSLog(@"I am going to Logout");
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"loginCheck"];
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"loginName"];
-        [[NSUserDefaults standardUserDefaults]synchronize ];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         _LoginNavButton.title = @"Login";
         
     }

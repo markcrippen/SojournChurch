@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SubmitPrayerViewController : UIViewController
+@interface SubmitPrayerViewController : UIViewController <UITextFieldDelegate>
 //outlets
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
 @property (weak, nonatomic) IBOutlet UITextView *prayerRequest;

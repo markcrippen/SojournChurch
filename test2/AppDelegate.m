@@ -24,6 +24,12 @@
                                                            [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
                                                            UITextAttributeTextShadowOffset,
                                                            [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:20.0], UITextAttributeFont, nil]];
+    
+    
+    
+    
+    
+    
     /*
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UITabBar *tabBar = tabBarController.tabBar;

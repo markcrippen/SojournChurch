@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface loginViewController : UIViewController
+@interface loginViewController : UIViewController <UITextFieldDelegate>
 {
     NSMutableData *responseData;
 }
@@ -20,6 +20,7 @@
 
 - (IBAction)loginButton:(id)sender;
 - (IBAction)backButton:(UIButton *)sender;
+- (IBAction)clearKeyboardButton:(UIButton *)sender;
 
 
 @end

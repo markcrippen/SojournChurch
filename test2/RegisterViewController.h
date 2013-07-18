@@ -8,18 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegisterViewController : UIViewController
+@interface RegisterViewController : UIViewController <UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *pass1;
 @property (weak, nonatomic) IBOutlet UITextField *pass2;
 @property (weak, nonatomic) IBOutlet UITextField *churchName;
 
-
-
-- (IBAction)createUser:(id)sender;
 - (IBAction)exitButton:(id)sender;
-- (IBAction)clearKeyboard:(id)sender;
+
 
 
 @end

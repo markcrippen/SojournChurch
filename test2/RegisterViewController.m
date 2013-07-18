@@ -8,6 +8,7 @@
 
 #import "RegisterViewController.h"
 #import <CommonCrypto/CommonDigest.h>
+#import <QuartzCore/QuartzCore.h>
 
 
 @interface RegisterViewController ()
@@ -30,6 +31,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    userName.delegate = self;
+    pass1.delegate = self;
+    pass2.delegate = self;
+    email.delegate = self;
+    churchName.delegate = self;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,30 +47,86 @@
 }
 
 
+-(BOOL) validateEmail: (NSString *) candidate {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:candidate];
+}
 
-- (IBAction)createUser:(id)sender {
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if ([userName.text length] < 1)
+    {
+        userName.layer.cornerRadius=8.0f;
+        userName.layer.masksToBounds=YES;
+        userName.layer.borderColor=[[UIColor redColor]CGColor];
+        userName.layer.borderWidth= 1.0f;
+        
+    }
+    else if ([userName.text length] > 1){
+        
+        //if(! self.validateEmail:textField){
+        userName.layer.cornerRadius=8.0f;
+        userName.layer.masksToBounds=YES;
+        userName.layer.borderColor=[[UIColor clearColor]CGColor];
+        userName.layer.borderWidth= 1.0f;
+        // }
+    }
+
     
-    //this is where the POST call is going to go
+    else if ([email.text length] < 1){
+        
+        //if(! self.validateEmail:textField){
+            textField.layer.cornerRadius=8.0f;
+            textField.layer.masksToBounds=YES;
+            textField.layer.borderColor=[[UIColor redColor]CGColor];
+            textField.layer.borderWidth= 1.0f;
+       // }
+    }
     
-    [self.userName resignFirstResponder];
-    [self.pass1 resignFirstResponder];
-    [self.pass2 resignFirstResponder];
-    [self.email resignFirstResponder];
-    [self.churchName resignFirstResponder];
-    //grab the device for analytics and user profiles
+    else if ([pass1.text length] < 8)
+    {
+        pass1.layer.cornerRadius=8.0f;
+        pass1.layer.masksToBounds=YES;
+        pass1.layer.borderColor=[[UIColor redColor]CGColor];
+        pass1.layer.borderWidth= 1.0f;
+        
+    }
     
-    NSString *device = [[UIDevice currentDevice] model];
-    NSString *deviceName = [[UIDevice currentDevice] name]; //what do we want to capture? or do we want analytics to cover this?
     
-    NSLog(@"Device Name is: %@", deviceName);
-    NSLog(@"Device is: %@",device);
+    else if ([pass2.text length] < 8){
+        
+        textField.layer.cornerRadius=8.0f;
+        textField.layer.masksToBounds=YES;
+        textField.layer.borderColor=[[UIColor redColor]CGColor];
+        textField.layer.borderWidth= 1.0f;
+        
+    }
+    else if ([churchName.text length] < 8){
+        
+        textField.layer.cornerRadius=8.0f;
+        textField.layer.masksToBounds=YES;
+        textField.layer.borderColor=[[UIColor redColor]CGColor];
+        textField.layer.borderWidth= 1.0f;
+        
+    }
     
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    //put in an IF statement to compare the two password fields
+    else{
+        
+        NSString *device = [[UIDevice currentDevice] model];
+        NSString *deviceName = [[UIDevice currentDevice] name]; //what do we want to capture? or do we want analytics to cover this?
+        
+        NSLog(@"Device Name is: %@", deviceName);
+        NSLog(@"Device is: %@",device);
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        //put in an IF statement to compare the two password fields
+        
         if ([self.pass1.text isEqualToString:self.pass2.text]){
             
             // Create your request string with parameter name as defined in PHP file
-            NSString *myRequestString = [NSString stringWithFormat:@"username=%@&password=%@&email=%@&church=%@&device=%@",userName.text, pass1.text, email.text, churchName.text, device];
+            NSString *myRequestString = [NSString stringWithFormat:@"username=%@&password1=%@&email=%@&church=%@&device=%@",userName.text, pass1.text, email.text, churchName.text, device];
             
             // Create Data from request
             NSData *myRequestData = [NSData dataWithBytes: [myRequestString UTF8String] length: [myRequestString length]];
@@ -99,12 +163,27 @@
                 
                 NSLog(@"hit the else: %@", response);
             }
+            
+            
+        } //ends the if for validation
 
         
-        } //ends the if for validation
+    }
+
+  
     
+}
     
-   }
+
+// Implement the UITextFieldDelegate in the .h file
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
 
 - (IBAction)exitButton:(id)sender {
     //need to close out the view
@@ -112,11 +191,4 @@
     
 }
 
-- (IBAction)clearKeyboard:(id)sender {
-    [self.userName resignFirstResponder];
-    [self.pass1 resignFirstResponder];
-    [self.pass2 resignFirstResponder];
-    [self.email resignFirstResponder];
-    [self.churchName resignFirstResponder];
-}
 @end

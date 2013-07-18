@@ -9,7 +9,7 @@
 #import "praiseTable.h"
 #import "praiseCell.h"
 #import "SWRevealViewController.h"
-
+#import "praiseDetailViewController.h"
 
 @interface praiseTable ()
 
@@ -109,7 +109,6 @@
 }
 
     
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -217,13 +216,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    praiseDetailViewController *praiseDetail = [self.storyboard instantiateViewControllerWithIdentifier:@"praiseDetailViewController"];
+    
+    praiseDetail.detailText = [[praiseArray objectAtIndex:indexPath.row] objectForKey:@"praiseNote"];
+    praiseDetail.detailNameText = [[praiseArray objectAtIndex:indexPath.row] objectForKey:@"displayname"];
+    praiseDetail.detailDateText= [[praiseArray objectAtIndex:indexPath.row] objectForKey:@"dateTime"];
+    praiseDetail.detailTitle = [[praiseArray objectAtIndex:indexPath.row] objectForKey:@"title"];
+    
+    [self.navigationController pushViewController:praiseDetail animated:YES];
 }
 
 @end
