@@ -28,7 +28,17 @@
     
     
     
+   UIImageView *splash = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
     
+    [self.window.rootViewController.view addSubview:splash];
+    
+    [UIView animateWithDuration:1.5
+                     animations:^{
+                         splash.alpha = 0;
+                     }
+                     completion:^(BOOL finished) {
+                         [splash removeFromSuperview];
+                     }];
     
     /*
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;

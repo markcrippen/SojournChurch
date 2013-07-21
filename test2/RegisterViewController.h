@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *churchName;
 
 - (IBAction)exitButton:(id)sender;
+- (IBAction)registerButton:(id)sender;
 
 
 
