@@ -10,7 +10,7 @@
 #import "PrayerCell.h"
 #import "PrayerDetailViewController.h"
 #import "SWRevealViewController.h"
-
+#import "GAI.h"
 
 @interface prayerTable ()
 
@@ -31,7 +31,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     
+    // manual screen tracking
+    [tracker sendView:@"Prayer Wall"];
     
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];

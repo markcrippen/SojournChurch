@@ -29,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.trackedViewName = @"Prayer Detail";
     
 	// Do any additional setup after loading the view.
     self.titleLable.text = self.detailTitle;

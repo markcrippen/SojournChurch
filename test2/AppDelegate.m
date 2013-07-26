@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "GAI.h"
+#import "GAITracker.h"
 
 @implementation AppDelegate
 
@@ -14,20 +16,24 @@
 {
     // Override point for customization after application launch.
     
-    
+    //custom button images
     UIImage *navBackgroundImage = [UIImage imageNamed:@"navbar_bg"];
     [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+    UIImage *backButtonImage = [[UIImage imageNamed:@"button_back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 13, 0, 6)];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
+    // Change the appearance of other navigation button
+    UIImage *barButtonImage = [[UIImage imageNamed:@"button_normal"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 6, 0, 6)];
+    [[UIBarButtonItem appearance] setBackgroundImage:barButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    //custom nav bar image
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor colorWithRed:244.0/255.0 green:244.0/255.0 blue:244.0/255.0 alpha:1.0], UITextAttributeTextColor,
+                                                           [UIColor colorWithRed:244.0/255.0 green:244.0/255.0 blue:250.0/255.0 alpha:1.0], UITextAttributeTextColor,
                                                            [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],UITextAttributeTextShadowColor,
                                                            [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
                                                            UITextAttributeTextShadowOffset,
                                                            [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:20.0], UITextAttributeFont, nil]];
-    
-    
-    
-    
+    //splash screen transition
    UIImageView *splash = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
     
     [self.window.rootViewController.view addSubview:splash];
@@ -36,10 +42,23 @@
                      animations:^{
                          splash.alpha = 0;
                      }
+     
                      completion:^(BOOL finished) {
                          [splash removeFromSuperview];
                      }];
     
+    
+    // Optional: automatically send uncaught exceptions to Google Analytics.
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
+    [GAI sharedInstance].dispatchInterval = 30;
+    // Optional: set debug to YES for extra debugging information.
+    [GAI sharedInstance].debug = YES;
+    // Create tracker instance.
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-30365002-1"];
+    
+    //letting me know that the analytics are working
+    [tracker sendView:@"App Loaded"];
     /*
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UITabBar *tabBar = tabBarController.tabBar;
@@ -75,6 +94,7 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

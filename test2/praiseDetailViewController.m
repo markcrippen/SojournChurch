@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.trackedViewName = @"Praise Detail";
+    
     self.titleLabel.text = self.detailTitle;
         self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.titleLabel.numberOfLines = 2;

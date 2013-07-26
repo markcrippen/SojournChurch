@@ -31,6 +31,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.trackedViewName = @"Registration View";
+    
     userName.delegate = self;
     pass1.delegate = self;
     pass2.delegate = self;

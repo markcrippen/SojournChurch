@@ -29,6 +29,8 @@
 {
     [super viewDidLoad];
    // self.userName.delegate = self;
+    self.trackedViewName = @"Login View";
+    
     userName.delegate = self;
     passWord.delegate = self;
     

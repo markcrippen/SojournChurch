@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface PrayerDetailViewController : UIViewController
+@interface PrayerDetailViewController : GAITrackedViewController
 
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;

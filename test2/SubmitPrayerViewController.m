@@ -10,6 +10,8 @@
 #import "SWRevealViewController.h"
 #import "loginViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "GAI.h"
+
 
 
 @interface SubmitPrayerViewController ()
@@ -38,8 +40,11 @@ NSString *loginCheck;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.trackedViewName=@"Submit View";
+    
     self.title = @"Submit";
     self.titleField.delegate = self;
+    self.prayerRequest.delegate = self;
     
     //loginCheck = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"];
     
@@ -72,6 +77,14 @@ NSString *loginCheck;
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView{
+   
+    if([textView.text isEqualToString:@"Details"]){
+        textView.text =@"";
+    }
+    
 }
 
 
@@ -113,7 +126,8 @@ NSString *loginCheck;
 - (IBAction)requestTypeButton:(UISegmentedControl *)sender {
           
         UISegmentedControl *segmented = (UISegmentedControl *)sender;
-        
+    //id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
         switch (segmented.selectedSegmentIndex) {
             default:
                 NSLog(@"Segment Item 1 selected.");
@@ -128,6 +142,9 @@ NSString *loginCheck;
                 
                 break;
         }
+   
+    
+   [[GAI sharedInstance].defaultTracker sendEventWithCategory:@"Submit prayer" withAction:@"buttonClick" withLabel:@"submit type" withValue:segValue];
 
 }
 
@@ -135,13 +152,15 @@ NSString *loginCheck;
     if (_anonPlug.on){
         NSLog(@"Anonplug is on");
         dName = @"Anonymous";
-        
+         [[GAI sharedInstance].defaultTracker sendEventWithCategory:@"Submit prayer" withAction:@"buttonClick" withLabel:@"anon plug" withValue:[NSNumber numberWithInteger:1]];
     }
     else{
         
       dName = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"];
+        [[GAI sharedInstance].defaultTracker sendEventWithCategory:@"Submit prayer" withAction:@"buttonClick" withLabel:@"anon plug" withValue:[NSNumber numberWithInteger:2]];
         
     }
+     
 }
 
 - (IBAction)exitButton:(UIButton *)sender {

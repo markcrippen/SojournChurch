@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface praiseDetailViewController : UIViewController
+@interface praiseDetailViewController : GAITrackedViewController
 
 
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;

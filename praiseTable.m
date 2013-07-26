@@ -10,6 +10,7 @@
 #import "praiseCell.h"
 #import "SWRevealViewController.h"
 #import "praiseDetailViewController.h"
+#import "GAI.h"
 
 @interface praiseTable ()
 
@@ -29,6 +30,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    // manual screen tracking
+    [tracker sendView:@"Praise Wall"];
     
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
     

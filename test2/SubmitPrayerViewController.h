@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface SubmitPrayerViewController : UIViewController <UITextFieldDelegate>
+
+@interface SubmitPrayerViewController : GAITrackedViewController <UITextFieldDelegate, UITextViewDelegate>
 //outlets
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
 @property (weak, nonatomic) IBOutlet UITextView *prayerRequest;

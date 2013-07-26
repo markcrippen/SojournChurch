@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
+
 
 @interface prayerTable : UITableViewController
 {

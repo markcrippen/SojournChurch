@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface loginViewController : UIViewController <UITextFieldDelegate>
+@interface loginViewController : GAITrackedViewController <UITextFieldDelegate>
 {
     NSMutableData *responseData;
 }
