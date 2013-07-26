@@ -152,12 +152,12 @@ NSString *loginCheck;
     if (_anonPlug.on){
         NSLog(@"Anonplug is on");
         dName = @"Anonymous";
-         [[GAI sharedInstance].defaultTracker sendEventWithCategory:@"Submit prayer" withAction:@"buttonClick" withLabel:@"anon plug" withValue:[NSNumber numberWithInteger:1]];
+         [[GAI sharedInstance].defaultTracker sendEventWithCategory:@"Submit prayer" withAction:@"buttonClick" withLabel:@"anon plug on" withValue:[NSNumber numberWithInteger:1]];
     }
     else{
         
       dName = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"];
-        [[GAI sharedInstance].defaultTracker sendEventWithCategory:@"Submit prayer" withAction:@"buttonClick" withLabel:@"anon plug" withValue:[NSNumber numberWithInteger:2]];
+        [[GAI sharedInstance].defaultTracker sendEventWithCategory:@"Submit prayer" withAction:@"buttonClick" withLabel:@"anon plug off" withValue:[NSNumber numberWithInteger:2]];
         
     }
      
@@ -180,7 +180,7 @@ NSString *loginCheck;
     [self.prayerRequest resignFirstResponder];
 
     if([dName isEqualToString:NULL]){
-        dName = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"];
+        dName = @"anonymous";
     }
     
     if([[[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"] isEqualToString:@"yes"]){
