@@ -34,7 +34,7 @@
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:0.7f];
     self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     
-    _menuItems = @[@"Prayer", @"Praise", @"Submit"];
+    _menuItems = @[@"Prayer", @"Praise", @"Submit", @"About"];
 
     UIEdgeInsets inset = UIEdgeInsetsMake(15, 0, 0, 0);
     self.tableView.contentInset = inset;
@@ -53,6 +53,8 @@
     // Return the number of sections.
     return 1;
 }
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

@@ -19,6 +19,9 @@
 		8E8DBB4917989A4900B701F3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8DBB4817989A4900B701F3 /* Default@2x.png */; };
 		8EB0109E17724D37000439D3 /* prayerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB0109D17724D37000439D3 /* prayerTable.m */; };
 		8EB010A51773A62D000439D3 /* prayingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB010A41773A62D000439D3 /* prayingIcon.png */; };
+		8EB707DF17B42444002FA6B0 /* ReportBug.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB707DE17B42444002FA6B0 /* ReportBug.m */; };
+		8EB707E117B42C07002FA6B0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB707E017B42C07002FA6B0 /* MessageUI.framework */; };
+		8EB707E317B95877002FA6B0 /* mainIpadSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707E217B95877002FA6B0 /* mainIpadSB.storyboard */; };
 		8EBAC9D5176EB491005CB4A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D4176EB491005CB4A1 /* UIKit.framework */; };
 		8EBAC9D7176EB491005CB4A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D6176EB491005CB4A1 /* Foundation.framework */; };
 		8EBAC9D9176EB491005CB4A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D8176EB491005CB4A1 /* CoreGraphics.framework */; };
@@ -90,6 +93,10 @@
 		8EB0109C17724D37000439D3 /* prayerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prayerTable.h; sourceTree = "<group>"; };
 		8EB0109D17724D37000439D3 /* prayerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prayerTable.m; sourceTree = "<group>"; };
 		8EB010A41773A62D000439D3 /* prayingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prayingIcon.png; path = images/prayingIcon.png; sourceTree = "<group>"; };
+		8EB707DD17B42444002FA6B0 /* ReportBug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportBug.h; sourceTree = "<group>"; };
+		8EB707DE17B42444002FA6B0 /* ReportBug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportBug.m; sourceTree = "<group>"; };
+		8EB707E017B42C07002FA6B0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8EB707E217B95877002FA6B0 /* mainIpadSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainIpadSB.storyboard; sourceTree = "<group>"; };
 		8EBAC9D1176EB491005CB4A1 /* test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBAC9D4176EB491005CB4A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EBAC9D6176EB491005CB4A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB707E117B42C07002FA6B0 /* MessageUI.framework in Frameworks */,
 				8E716DEE17A18ECA001D083D /* SystemConfiguration.framework in Frameworks */,
 				8E716DE317A18E55001D083D /* CoreData.framework in Frameworks */,
 				8E8DBB4717972D4B00B701F3 /* QuartzCore.framework in Frameworks */,
@@ -194,6 +202,7 @@
 		8EBAC9D3176EB491005CB4A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8EB707E017B42C07002FA6B0 /* MessageUI.framework */,
 				8E716DED17A18ECA001D083D /* SystemConfiguration.framework */,
 				8E716DE217A18E55001D083D /* CoreData.framework */,
 				8E8DBB4617972D4B00B701F3 /* QuartzCore.framework */,
@@ -210,6 +219,7 @@
 				8EBAC9E3176EB491005CB4A1 /* AppDelegate.h */,
 				8EBAC9E4176EB491005CB4A1 /* AppDelegate.m */,
 				8EBAC9EC176EB491005CB4A1 /* MainStoryboard.storyboard */,
+				8EB707E217B95877002FA6B0 /* mainIpadSB.storyboard */,
 				8EC9EBFE178F568300602047 /* library */,
 				8EBAC9DB176EB491005CB4A1 /* Supporting Files */,
 				8EDB7B711774FF900024EF3E /* loginViewController.h */,
@@ -232,6 +242,8 @@
 				8EDB7B7E177B3CE10024EF3E /* praiseTable.m */,
 				8EDB7B74177934760024EF3E /* SubmitPrayerViewController.h */,
 				8EDB7B75177934760024EF3E /* SubmitPrayerViewController.m */,
+				8EB707DD17B42444002FA6B0 /* ReportBug.h */,
+				8EB707DE17B42444002FA6B0 /* ReportBug.m */,
 			);
 			path = test2;
 			sourceTree = "<group>";
@@ -393,6 +405,7 @@
 				8E8DBB4917989A4900B701F3 /* Default@2x.png in Resources */,
 				8E0A2C7A179F24B900568FE6 /* button_back.png in Resources */,
 				8E0A2C7B179F24B900568FE6 /* button_normal.png in Resources */,
+				8EB707E317B95877002FA6B0 /* mainIpadSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +429,7 @@
 				8EC9EC00178F575F00602047 /* SidebarViewController.m in Sources */,
 				8EC9EC04178F664A00602047 /* SWRevealViewController.m in Sources */,
 				8EC9EC0717947CF600602047 /* praiseDetailViewController.m in Sources */,
+				8EB707DF17B42444002FA6B0 /* ReportBug.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,11 +517,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "test2/test2-Prefix.pch";
 				INFOPLIST_FILE = "test2/test2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/test2\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -518,11 +534,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "test2/test2-Prefix.pch";
 				INFOPLIST_FILE = "test2/test2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/test2\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

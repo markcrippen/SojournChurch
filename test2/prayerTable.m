@@ -108,6 +108,9 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)loadError
 {
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker sendException:NO withNSError:loadError];
     UIAlertView *errorView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Sorry this didnt work for you, please try again" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
     [errorView show];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
@@ -163,10 +166,16 @@
     cellBackgroundView.image = background;
     cell.backgroundView = cellBackgroundView;
     
+    NSDateFormatter *inputFormatter = [[NSDateFormatter alloc] init];
+        [inputFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            NSDate *formatterDate = [inputFormatter dateFromString:[[news objectAtIndex:indexPath.row] objectForKey:@"datetime"]];
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+        [outputFormatter setDateFormat:@"EE MM/dd/yy"];
+            NSString *newDateString = [outputFormatter stringFromDate:formatterDate];
     
     cell.dName.text = [[news objectAtIndex:indexPath.row] objectForKey:@"displayname"];
     cell.priority.text = [[news objectAtIndex:indexPath.row]objectForKey:@"priority"];
-    cell.dateTime.text = [[news objectAtIndex:indexPath.row] objectForKey:@"datetime"];
+    cell.dateTime.text = newDateString;
     cell.numPraying.text = [[news objectAtIndex:indexPath.row] objectForKey:@"numPraying"];
     cell.requestPreview.text = [[news objectAtIndex:indexPath.row] objectForKey:@"title"];
     

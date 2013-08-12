@@ -38,7 +38,14 @@
     
     self.nameLabel.text = self.detailNameText;
     
-    self.dateLabel.text = self.detailDateText;
+    NSDateFormatter *inputFormatter = [[NSDateFormatter alloc] init];
+    [inputFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *formatterDate = [inputFormatter dateFromString:self.detailDateText];
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+    [outputFormatter setDateFormat:@"EE MM/dd/yy h:mm a"];
+    NSString *newDateString = [outputFormatter stringFromDate:formatterDate];
+   
+    self.dateLabel.text = newDateString;
        self.dateLabel.preferredMaxLayoutWidth = 175.0f;
        self.dateLabel.numberOfLines = 1;
 }

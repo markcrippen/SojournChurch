@@ -80,7 +80,8 @@ NSString *loginCheck;
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView{
-   
+   //clears the placeholder text in the textview.
+    
     if([textView.text isEqualToString:@"Details"]){
         textView.text =@"";
     }
@@ -112,7 +113,6 @@ NSString *loginCheck;
     }
     
 }
-
 
 
 
