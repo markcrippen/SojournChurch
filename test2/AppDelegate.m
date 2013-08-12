@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "GAI.h"
 #import "GAITracker.h"
+#import "TestFlight.h"
+
 
 @implementation AppDelegate
 
@@ -46,6 +48,12 @@
                      completion:^(BOOL finished) {
                          [splash removeFromSuperview];
                      }];
+    
+    
+    //this is for TestFlight (the Beta Testing stuff)
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    [TestFlight setOptions:@{ TFOptionDisableInAppUpdates : @YES }];
+    [TestFlight takeOff:@"d7811457-931a-49a7-847e-c12b995707c1"];
     
     
     // Optional: automatically send uncaught exceptions to Google Analytics.

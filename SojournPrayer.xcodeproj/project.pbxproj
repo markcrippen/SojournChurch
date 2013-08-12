@@ -22,6 +22,8 @@
 		8EB707DF17B42444002FA6B0 /* ReportBug.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB707DE17B42444002FA6B0 /* ReportBug.m */; };
 		8EB707E117B42C07002FA6B0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB707E017B42C07002FA6B0 /* MessageUI.framework */; };
 		8EB707E317B95877002FA6B0 /* mainIpadSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707E217B95877002FA6B0 /* mainIpadSB.storyboard */; };
+		8EB707EB17B98615002FA6B0 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB707E517B98615002FA6B0 /* libTestFlight.a */; };
+		8EB707EF17B9907E002FA6B0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB707EE17B9907E002FA6B0 /* libz.dylib */; };
 		8EBAC9D5176EB491005CB4A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D4176EB491005CB4A1 /* UIKit.framework */; };
 		8EBAC9D7176EB491005CB4A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D6176EB491005CB4A1 /* Foundation.framework */; };
 		8EBAC9D9176EB491005CB4A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D8176EB491005CB4A1 /* CoreGraphics.framework */; };
@@ -97,14 +99,19 @@
 		8EB707DE17B42444002FA6B0 /* ReportBug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportBug.m; sourceTree = "<group>"; };
 		8EB707E017B42C07002FA6B0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8EB707E217B95877002FA6B0 /* mainIpadSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainIpadSB.storyboard; sourceTree = "<group>"; };
-		8EBAC9D1176EB491005CB4A1 /* test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB707E517B98615002FA6B0 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		8EB707E817B98615002FA6B0 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		8EB707E917B98615002FA6B0 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		8EB707EA17B98615002FA6B0 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		8EB707EE17B9907E002FA6B0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		8EBAC9D1176EB491005CB4A1 /* SojournPrayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SojournPrayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBAC9D4176EB491005CB4A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EBAC9D6176EB491005CB4A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8EBAC9D8176EB491005CB4A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8EBAC9DC176EB491005CB4A1 /* test2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "test2-Info.plist"; sourceTree = "<group>"; };
+		8EBAC9DC176EB491005CB4A1 /* SojournPrayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SojournPrayer-Info.plist"; sourceTree = "<group>"; };
 		8EBAC9DE176EB491005CB4A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8EBAC9E0176EB491005CB4A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8EBAC9E2176EB491005CB4A1 /* test2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test2-Prefix.pch"; sourceTree = "<group>"; };
+		8EBAC9E2176EB491005CB4A1 /* SojournPrayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SojournPrayer-Prefix.pch"; sourceTree = "<group>"; };
 		8EBAC9E3176EB491005CB4A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8EBAC9E4176EB491005CB4A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8EBAC9E6176EB491005CB4A1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -167,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB707EF17B9907E002FA6B0 /* libz.dylib in Frameworks */,
 				8EB707E117B42C07002FA6B0 /* MessageUI.framework in Frameworks */,
 				8E716DEE17A18ECA001D083D /* SystemConfiguration.framework in Frameworks */,
 				8E716DE317A18E55001D083D /* CoreData.framework in Frameworks */,
@@ -176,12 +184,24 @@
 				8EBAC9D9176EB491005CB4A1 /* CoreGraphics.framework in Frameworks */,
 				8E716DEF17A1A8D8001D083D /* libGoogleAnalytics_debug.a in Frameworks */,
 				8E716DEC17A18E7E001D083D /* libGoogleAnalytics.a in Frameworks */,
+				8EB707EB17B98615002FA6B0 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EB707E417B98615002FA6B0 /* TestFlightSDK2.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				8EB707E517B98615002FA6B0 /* libTestFlight.a */,
+				8EB707E817B98615002FA6B0 /* TestFlight+AsyncLogging.h */,
+				8EB707E917B98615002FA6B0 /* TestFlight+ManualSessions.h */,
+				8EB707EA17B98615002FA6B0 /* TestFlight.h */,
+			);
+			path = TestFlightSDK2.0.0;
+			sourceTree = "<group>";
+		};
 		8EBAC9C8176EB491005CB4A1 = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +214,7 @@
 		8EBAC9D2176EB491005CB4A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8EBAC9D1176EB491005CB4A1 /* test2.app */,
+				8EBAC9D1176EB491005CB4A1 /* SojournPrayer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,6 +222,7 @@
 		8EBAC9D3176EB491005CB4A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8EB707EE17B9907E002FA6B0 /* libz.dylib */,
 				8EB707E017B42C07002FA6B0 /* MessageUI.framework */,
 				8E716DED17A18ECA001D083D /* SystemConfiguration.framework */,
 				8E716DE217A18E55001D083D /* CoreData.framework */,
@@ -251,10 +272,10 @@
 		8EBAC9DB176EB491005CB4A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8EBAC9DC176EB491005CB4A1 /* test2-Info.plist */,
+				8EBAC9DC176EB491005CB4A1 /* SojournPrayer-Info.plist */,
 				8EBAC9DD176EB491005CB4A1 /* InfoPlist.strings */,
 				8EBAC9E0176EB491005CB4A1 /* main.m */,
-				8EBAC9E2176EB491005CB4A1 /* test2-Prefix.pch */,
+				8EBAC9E2176EB491005CB4A1 /* SojournPrayer-Prefix.pch */,
 				8EBAC9E6176EB491005CB4A1 /* Default.png */,
 				8E8DBB4817989A4900B701F3 /* Default@2x.png */,
 				8EC9EBF2178F49C900602047 /* common_bg.png */,
@@ -301,6 +322,7 @@
 		8EC9EBFE178F568300602047 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				8EB707E417B98615002FA6B0 /* TestFlightSDK2.0.0 */,
 				8E716DE417A18E7E001D083D /* GAI.h */,
 				8E716DE517A18E7E001D083D /* GAITrackedViewController.h */,
 				8E716DE617A18E7E001D083D /* GAITracker.h */,
@@ -317,9 +339,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8EBAC9D0176EB491005CB4A1 /* test2 */ = {
+		8EBAC9D0176EB491005CB4A1 /* SojournPrayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8EBAC9F4176EB491005CB4A1 /* Build configuration list for PBXNativeTarget "test2" */;
+			buildConfigurationList = 8EBAC9F4176EB491005CB4A1 /* Build configuration list for PBXNativeTarget "SojournPrayer" */;
 			buildPhases = (
 				8EBAC9CD176EB491005CB4A1 /* Sources */,
 				8EBAC9CE176EB491005CB4A1 /* Frameworks */,
@@ -329,9 +351,9 @@
 			);
 			dependencies = (
 			);
-			name = test2;
+			name = SojournPrayer;
 			productName = test2;
-			productReference = 8EBAC9D1176EB491005CB4A1 /* test2.app */;
+			productReference = 8EBAC9D1176EB491005CB4A1 /* SojournPrayer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -343,7 +365,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Mark Crippen";
 			};
-			buildConfigurationList = 8EBAC9CC176EB491005CB4A1 /* Build configuration list for PBXProject "test2" */;
+			buildConfigurationList = 8EBAC9CC176EB491005CB4A1 /* Build configuration list for PBXProject "SojournPrayer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -355,7 +377,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8EBAC9D0176EB491005CB4A1 /* test2 */,
+				8EBAC9D0176EB491005CB4A1 /* SojournPrayer */,
 			);
 		};
 /* End PBXProject section */
@@ -514,15 +536,20 @@
 		8EBAC9F5176EB491005CB4A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ronna Keller (BT8VC7QXSY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "test2/test2-Prefix.pch";
-				INFOPLIST_FILE = "test2/test2-Info.plist";
+				GCC_PREFIX_HEADER = "test2/SojournPrayer-Prefix.pch";
+				INFOPLIST_FILE = "test2/SojournPrayer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/test2\"",
+					"\"$(SRCROOT)/test2/TestFlightSDK2.0.0\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SojournPrayer;
+				PROVISIONING_PROFILE = "13E0ED84-99AA-446F-B54A-F76EE4C8EEB7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -531,15 +558,21 @@
 		8EBAC9F6176EB491005CB4A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ronna Keller (JGNXNW4LZ7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "test2/test2-Prefix.pch";
-				INFOPLIST_FILE = "test2/test2-Info.plist";
+				GCC_PREFIX_HEADER = "test2/SojournPrayer-Prefix.pch";
+				INFOPLIST_FILE = "test2/SojournPrayer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/test2\"",
+					"\"$(SRCROOT)/test2/TestFlightSDK2.0.0\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = SojournPrayer;
+				PROVISIONING_PROFILE = "B34C3B96-D744-41E0-BD6F-F779FE5B30E3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -548,7 +581,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8EBAC9CC176EB491005CB4A1 /* Build configuration list for PBXProject "test2" */ = {
+		8EBAC9CC176EB491005CB4A1 /* Build configuration list for PBXProject "SojournPrayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EBAC9F2176EB491005CB4A1 /* Debug */,
@@ -557,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8EBAC9F4176EB491005CB4A1 /* Build configuration list for PBXNativeTarget "test2" */ = {
+		8EBAC9F4176EB491005CB4A1 /* Build configuration list for PBXNativeTarget "SojournPrayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EBAC9F5176EB491005CB4A1 /* Debug */,
