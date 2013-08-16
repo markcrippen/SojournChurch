@@ -19,6 +19,7 @@
     // Override point for customization after application launch.
     
     //custom button images
+    /*
     UIImage *navBackgroundImage = [UIImage imageNamed:@"navbar_bg"];
     [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
     UIImage *backButtonImage = [[UIImage imageNamed:@"button_back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 13, 0, 6)];
@@ -34,8 +35,14 @@
                                                            [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],UITextAttributeTextShadowColor,
                                                            [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
                                                            UITextAttributeTextShadowOffset,
-                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:20.0], UITextAttributeFont, nil]];
-    //splash screen transition
+                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" 
+                                                            size:20.0], UITextAttributeFont, nil]];
+    
+     
+     */
+    
+     
+     //splash screen transition
    UIImageView *splash = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
     
     [self.window.rootViewController.view addSubview:splash];

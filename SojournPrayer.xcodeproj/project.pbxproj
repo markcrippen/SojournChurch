@@ -24,6 +24,12 @@
 		8EB707E317B95877002FA6B0 /* mainIpadSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707E217B95877002FA6B0 /* mainIpadSB.storyboard */; };
 		8EB707EB17B98615002FA6B0 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB707E517B98615002FA6B0 /* libTestFlight.a */; };
 		8EB707EF17B9907E002FA6B0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB707EE17B9907E002FA6B0 /* libz.dylib */; };
+		8EB707F117BC07E4002FA6B0 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707F017BC07E4002FA6B0 /* sky.png */; };
+		8EB707F317BC0AF7002FA6B0 /* sky1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707F217BC0AF7002FA6B0 /* sky1.png */; };
+		8EB707F517BC0CA5002FA6B0 /* sky1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707F417BC0CA5002FA6B0 /* sky1@2x.png */; };
+		8EB707F717BC11F6002FA6B0 /* navbar_bgWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707F617BC11F6002FA6B0 /* navbar_bgWhite.png */; };
+		8EB707F917BC1208002FA6B0 /* navbar_bgWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707F817BC1207002FA6B0 /* navbar_bgWhite@2x.png */; };
+		8EB707FB17BC167C002FA6B0 /* icon_horn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707FA17BC167C002FA6B0 /* icon_horn.png */; };
 		8EBAC9D5176EB491005CB4A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D4176EB491005CB4A1 /* UIKit.framework */; };
 		8EBAC9D7176EB491005CB4A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D6176EB491005CB4A1 /* Foundation.framework */; };
 		8EBAC9D9176EB491005CB4A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D8176EB491005CB4A1 /* CoreGraphics.framework */; };
@@ -104,6 +110,12 @@
 		8EB707E917B98615002FA6B0 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
 		8EB707EA17B98615002FA6B0 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		8EB707EE17B9907E002FA6B0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		8EB707F017BC07E4002FA6B0 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
+		8EB707F217BC0AF7002FA6B0 /* sky1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky1.png; sourceTree = "<group>"; };
+		8EB707F417BC0CA5002FA6B0 /* sky1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sky1@2x.png"; sourceTree = "<group>"; };
+		8EB707F617BC11F6002FA6B0 /* navbar_bgWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_bgWhite.png; sourceTree = "<group>"; };
+		8EB707F817BC1207002FA6B0 /* navbar_bgWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_bgWhite@2x.png"; sourceTree = "<group>"; };
+		8EB707FA17BC167C002FA6B0 /* icon_horn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_horn.png; sourceTree = "<group>"; };
 		8EBAC9D1176EB491005CB4A1 /* SojournPrayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SojournPrayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBAC9D4176EB491005CB4A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EBAC9D6176EB491005CB4A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -276,12 +288,18 @@
 				8EBAC9DD176EB491005CB4A1 /* InfoPlist.strings */,
 				8EBAC9E0176EB491005CB4A1 /* main.m */,
 				8EBAC9E2176EB491005CB4A1 /* SojournPrayer-Prefix.pch */,
+				8EB707F017BC07E4002FA6B0 /* sky.png */,
 				8EBAC9E6176EB491005CB4A1 /* Default.png */,
+				8EB707FA17BC167C002FA6B0 /* icon_horn.png */,
 				8E8DBB4817989A4900B701F3 /* Default@2x.png */,
 				8EC9EBF2178F49C900602047 /* common_bg.png */,
 				8EC9EBF3178F49C900602047 /* common_bg@2x.png */,
+				8EB707F617BC11F6002FA6B0 /* navbar_bgWhite.png */,
+				8EB707F817BC1207002FA6B0 /* navbar_bgWhite@2x.png */,
 				8EC9EBDC178F1CAD00602047 /* navbar_bg.png */,
 				8EC9EBDE178F1CBE00602047 /* navbar_bg@2x.png */,
+				8EB707F217BC0AF7002FA6B0 /* sky1.png */,
+				8EB707F417BC0CA5002FA6B0 /* sky1@2x.png */,
 				8EC9EBE0178F444600602047 /* tabbar.png */,
 				8EC9EBE1178F444600602047 /* tabbar@2x.png */,
 				8EC9EBFA178F542200602047 /* menu.png */,
@@ -428,6 +446,12 @@
 				8E0A2C7A179F24B900568FE6 /* button_back.png in Resources */,
 				8E0A2C7B179F24B900568FE6 /* button_normal.png in Resources */,
 				8EB707E317B95877002FA6B0 /* mainIpadSB.storyboard in Resources */,
+				8EB707F117BC07E4002FA6B0 /* sky.png in Resources */,
+				8EB707F317BC0AF7002FA6B0 /* sky1.png in Resources */,
+				8EB707F517BC0CA5002FA6B0 /* sky1@2x.png in Resources */,
+				8EB707F717BC11F6002FA6B0 /* navbar_bgWhite.png in Resources */,
+				8EB707F917BC1208002FA6B0 /* navbar_bgWhite@2x.png in Resources */,
+				8EB707FB17BC167C002FA6B0 /* icon_horn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +574,7 @@
 				PRODUCT_NAME = SojournPrayer;
 				PROVISIONING_PROFILE = "13E0ED84-99AA-446F-B54A-F76EE4C8EEB7";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -573,7 +597,7 @@
 				PRODUCT_NAME = SojournPrayer;
 				PROVISIONING_PROFILE = "B34C3B96-D744-41E0-BD6F-F779FE5B30E3";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

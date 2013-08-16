@@ -50,10 +50,10 @@
     self.title = @"Prayer";
     
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg"]];
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sky1"]];
     self.tableView.backgroundColor = [UIColor clearColor];
     
-    UIEdgeInsets inset = UIEdgeInsetsMake(5, 0, 0, 0);
+    UIEdgeInsets inset = UIEdgeInsetsMake(5, 10, 10, 0);
     self.tableView.contentInset = inset;
     
     // Uncomment the following line to preserve selection between presentations.

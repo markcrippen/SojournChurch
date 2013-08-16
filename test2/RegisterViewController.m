@@ -194,6 +194,7 @@
         if ([response isEqualToString:@"User Created!"]) {
             NSLog(@"%@",response);
             [[NSUserDefaults standardUserDefaults] setObject:userName.text forKey:@"loginCheck"];
+            [[NSUserDefaults standardUserDefaults] setObject:userName.text forKey:@"loginName"];
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"User Created" message:@"You have been logged in" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
             [alertView show];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

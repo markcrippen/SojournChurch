@@ -115,8 +115,6 @@ NSString *loginCheck;
 }
 
 
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -155,9 +153,18 @@ NSString *loginCheck;
          [[GAI sharedInstance].defaultTracker sendEventWithCategory:@"Submit prayer" withAction:@"buttonClick" withLabel:@"anon plug on" withValue:[NSNumber numberWithInteger:1]];
     }
     else{
+        if([[[NSUserDefaults standardUserDefaults] objectForKey:@"loginName"] length] == 0){
+            NSLog(@"not logged in");
+           
+            UIAlertView *anonAlertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Please login before changing this setting" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            [anonAlertView show];
+            
+        }
         
-      dName = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"];
+        else{
+      dName = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginName"];
         [[GAI sharedInstance].defaultTracker sendEventWithCategory:@"Submit prayer" withAction:@"buttonClick" withLabel:@"anon plug off" withValue:[NSNumber numberWithInteger:2]];
+        }
         
     }
      
@@ -171,25 +178,23 @@ NSString *loginCheck;
 }
 
 
-
-
 - (IBAction)submitButton:(id)sender {
     //I need to add a statement that will check if user is logged in
     //if not logged in, load the window to login, else continue
     [self.titleField resignFirstResponder];
     [self.prayerRequest resignFirstResponder];
-
-    if([dName isEqualToString:NULL]){
-        dName = @"anonymous";
-    }
     
     if([[[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"] isEqualToString:@"yes"]){
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
       name  = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginName"];
+        
+        if([dName length] == 0){
+            dName = name;
+        }
     
     // Create your request string with parameter name as defined in PHP file
-    NSString *myRequestString = [NSString stringWithFormat:@"request=%@&name=%@&displayname=%@&title=%@", self.prayerRequest.text, name,dName, self.titleField.text];
+    NSString *myRequestString = [NSString stringWithFormat:@"request=%@&name=%@&displayname=%@&title=%@", self.prayerRequest.text, name, dName, self.titleField.text];
 
     // Create Data from request
     NSData *myRequestData = [NSData dataWithBytes: [myRequestString UTF8String] length: [myRequestString length]];

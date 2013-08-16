@@ -30,9 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:0.8f];
-    self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:0.7f];
-    self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
+    //self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:0.8f];
+    //self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:0.7f];
+    //self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     
     _menuItems = @[@"Prayer", @"Praise", @"Submit", @"About"];
 
