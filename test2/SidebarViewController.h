@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface SidebarViewController : UITableViewController
+{
+    NSArray *menu2;
+}
+
+@property (strong, nonatomic) IBOutlet UITableView *sideBarView;
+
 
 @end

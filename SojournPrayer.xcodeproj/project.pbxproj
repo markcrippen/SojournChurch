@@ -10,6 +10,12 @@
 		8E0A2C7A179F24B900568FE6 /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0A2C78179F24B900568FE6 /* button_back.png */; };
 		8E0A2C7B179F24B900568FE6 /* button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0A2C79179F24B900568FE6 /* button_normal.png */; };
 		8E0E47711784C3F30058DCD0 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E47701784C3F30058DCD0 /* RegisterViewController.m */; };
+		8E4FDD2D17C94C04008E32A4 /* login2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FDD2C17C94C04008E32A4 /* login2VC.m */; };
+		8E4FDD3017C955F5008E32A4 /* logOutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FDD2F17C955F5008E32A4 /* logOutVC.m */; };
+		8E4FDD3317C98A7B008E32A4 /* myRequestsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FDD3217C98A7B008E32A4 /* myRequestsCell.m */; };
+		8E4FDD3617C99842008E32A4 /* myRequestsDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FDD3517C99842008E32A4 /* myRequestsDetail.m */; };
+		8E4FDD3917C99EFC008E32A4 /* myPrayersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FDD3817C99EFB008E32A4 /* myPrayersCell.m */; };
+		8E4FDD3C17C9A6D5008E32A4 /* myPrayersDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FDD3B17C9A6D5008E32A4 /* myPrayersDetail.m */; };
 		8E716DE317A18E55001D083D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E716DE217A18E55001D083D /* CoreData.framework */; };
 		8E716DEC17A18E7E001D083D /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E716DEA17A18E7E001D083D /* libGoogleAnalytics.a */; };
 		8E716DEE17A18ECA001D083D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E716DED17A18ECA001D083D /* SystemConfiguration.framework */; };
@@ -30,6 +36,8 @@
 		8EB707F717BC11F6002FA6B0 /* navbar_bgWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707F617BC11F6002FA6B0 /* navbar_bgWhite.png */; };
 		8EB707F917BC1208002FA6B0 /* navbar_bgWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707F817BC1207002FA6B0 /* navbar_bgWhite@2x.png */; };
 		8EB707FB17BC167C002FA6B0 /* icon_horn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB707FA17BC167C002FA6B0 /* icon_horn.png */; };
+		8EB707FE17BEC40D002FA6B0 /* myPrayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB707FD17BEC40C002FA6B0 /* myPrayers.m */; };
+		8EB7080117BEC435002FA6B0 /* myRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7080017BEC435002FA6B0 /* myRequests.m */; };
 		8EBAC9D5176EB491005CB4A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D4176EB491005CB4A1 /* UIKit.framework */; };
 		8EBAC9D7176EB491005CB4A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D6176EB491005CB4A1 /* Foundation.framework */; };
 		8EBAC9D9176EB491005CB4A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBAC9D8176EB491005CB4A1 /* CoreGraphics.framework */; };
@@ -86,6 +94,18 @@
 		8E0A2C79179F24B900568FE6 /* button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_normal.png; sourceTree = "<group>"; };
 		8E0E476F1784C3F30058DCD0 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		8E0E47701784C3F30058DCD0 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		8E4FDD2B17C94C04008E32A4 /* login2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = login2VC.h; sourceTree = "<group>"; };
+		8E4FDD2C17C94C04008E32A4 /* login2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = login2VC.m; sourceTree = "<group>"; };
+		8E4FDD2E17C955F5008E32A4 /* logOutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logOutVC.h; sourceTree = "<group>"; };
+		8E4FDD2F17C955F5008E32A4 /* logOutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = logOutVC.m; sourceTree = "<group>"; };
+		8E4FDD3117C98A7B008E32A4 /* myRequestsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myRequestsCell.h; sourceTree = "<group>"; };
+		8E4FDD3217C98A7B008E32A4 /* myRequestsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myRequestsCell.m; sourceTree = "<group>"; };
+		8E4FDD3417C99841008E32A4 /* myRequestsDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myRequestsDetail.h; sourceTree = "<group>"; };
+		8E4FDD3517C99842008E32A4 /* myRequestsDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myRequestsDetail.m; sourceTree = "<group>"; };
+		8E4FDD3717C99EFB008E32A4 /* myPrayersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myPrayersCell.h; sourceTree = "<group>"; };
+		8E4FDD3817C99EFB008E32A4 /* myPrayersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myPrayersCell.m; sourceTree = "<group>"; };
+		8E4FDD3A17C9A6D5008E32A4 /* myPrayersDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myPrayersDetail.h; sourceTree = "<group>"; };
+		8E4FDD3B17C9A6D5008E32A4 /* myPrayersDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myPrayersDetail.m; sourceTree = "<group>"; };
 		8E716DE217A18E55001D083D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8E716DE417A18E7E001D083D /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
 		8E716DE517A18E7E001D083D /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
@@ -116,6 +136,10 @@
 		8EB707F617BC11F6002FA6B0 /* navbar_bgWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_bgWhite.png; sourceTree = "<group>"; };
 		8EB707F817BC1207002FA6B0 /* navbar_bgWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_bgWhite@2x.png"; sourceTree = "<group>"; };
 		8EB707FA17BC167C002FA6B0 /* icon_horn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_horn.png; sourceTree = "<group>"; };
+		8EB707FC17BEC40C002FA6B0 /* myPrayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myPrayers.h; sourceTree = "<group>"; };
+		8EB707FD17BEC40C002FA6B0 /* myPrayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myPrayers.m; sourceTree = "<group>"; };
+		8EB707FF17BEC435002FA6B0 /* myRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myRequests.h; sourceTree = "<group>"; };
+		8EB7080017BEC435002FA6B0 /* myRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myRequests.m; sourceTree = "<group>"; };
 		8EBAC9D1176EB491005CB4A1 /* SojournPrayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SojournPrayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBAC9D4176EB491005CB4A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EBAC9D6176EB491005CB4A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -257,10 +281,26 @@
 				8EBAC9DB176EB491005CB4A1 /* Supporting Files */,
 				8EDB7B711774FF900024EF3E /* loginViewController.h */,
 				8EDB7B721774FF900024EF3E /* loginViewController.m */,
+				8E4FDD2E17C955F5008E32A4 /* logOutVC.h */,
+				8E4FDD2F17C955F5008E32A4 /* logOutVC.m */,
+				8E4FDD2B17C94C04008E32A4 /* login2VC.h */,
+				8E4FDD2C17C94C04008E32A4 /* login2VC.m */,
 				8EC9EBF8178F516200602047 /* SidebarViewController.h */,
 				8EC9EBF9178F516200602047 /* SidebarViewController.m */,
 				8E0E476F1784C3F30058DCD0 /* RegisterViewController.h */,
 				8E0E47701784C3F30058DCD0 /* RegisterViewController.m */,
+				8E4FDD3A17C9A6D5008E32A4 /* myPrayersDetail.h */,
+				8E4FDD3B17C9A6D5008E32A4 /* myPrayersDetail.m */,
+				8E4FDD3717C99EFB008E32A4 /* myPrayersCell.h */,
+				8E4FDD3817C99EFB008E32A4 /* myPrayersCell.m */,
+				8EB707FC17BEC40C002FA6B0 /* myPrayers.h */,
+				8EB707FD17BEC40C002FA6B0 /* myPrayers.m */,
+				8E4FDD3417C99841008E32A4 /* myRequestsDetail.h */,
+				8E4FDD3517C99842008E32A4 /* myRequestsDetail.m */,
+				8E4FDD3117C98A7B008E32A4 /* myRequestsCell.h */,
+				8E4FDD3217C98A7B008E32A4 /* myRequestsCell.m */,
+				8EB707FF17BEC435002FA6B0 /* myRequests.h */,
+				8EB7080017BEC435002FA6B0 /* myRequests.m */,
 				8EDB7B7A177A350F0024EF3E /* PrayerDetailViewController.h */,
 				8EDB7B7B177A350F0024EF3E /* PrayerDetailViewController.m */,
 				8EBACA28177244EE005CB4A1 /* PrayerCell.h */,
@@ -476,6 +516,14 @@
 				8EC9EC04178F664A00602047 /* SWRevealViewController.m in Sources */,
 				8EC9EC0717947CF600602047 /* praiseDetailViewController.m in Sources */,
 				8EB707DF17B42444002FA6B0 /* ReportBug.m in Sources */,
+				8EB707FE17BEC40D002FA6B0 /* myPrayers.m in Sources */,
+				8EB7080117BEC435002FA6B0 /* myRequests.m in Sources */,
+				8E4FDD2D17C94C04008E32A4 /* login2VC.m in Sources */,
+				8E4FDD3017C955F5008E32A4 /* logOutVC.m in Sources */,
+				8E4FDD3317C98A7B008E32A4 /* myRequestsCell.m in Sources */,
+				8E4FDD3617C99842008E32A4 /* myRequestsDetail.m in Sources */,
+				8E4FDD3917C99EFC008E32A4 /* myPrayersCell.m in Sources */,
+				8E4FDD3C17C9A6D5008E32A4 /* myPrayersDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
