@@ -426,6 +426,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="sky1.png" id="zMz-0I-wp0">
+                                        <rect key="frame" x="0.0" y="-9" width="320" height="101"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dCb-SE-scV">
                                         <rect key="frame" x="20" y="71" width="140" height="21"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -448,7 +452,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="96" verticalHuggingPriority="126" horizontalCompressionResistancePriority="655" verticalCompressionResistancePriority="628" id="IRa-yT-RdF">
                                 <rect key="frame" x="0.0" y="97" width="320" height="442"/>
@@ -506,7 +509,6 @@
         <!--Log OutVC-->
         <scene sceneID="3Gi-6Q-mHC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FcK-um-m5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="logOutVC" id="VYc-Uu-D6Y" customClass="logOutVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T7y-Xt-5gg">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
@@ -547,6 +549,7 @@
                         <outlet property="navButton" destination="t88-6Q-a7B" id="GUf-OK-DBr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FcK-um-m5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-579" y="3197"/>
         </scene>
@@ -749,7 +752,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">This Application was built by Mark Crippen for Sojourn Church. Copyright 2013 All Rights Reserved. For more information please visit http://www.sojournchurch.org                                              A special Thanks to Ronna Keller, Christiana Kotyk, Richard Wetzel and everybody else who contributed to this application and its Success.</string>
+                                        <string key="content">This Application was built by Mark Crippen for Sojourn Church. Copyright 2013 All Rights Reserved. For more information please visit http://www.sojournchurch.org                                              A special Thanks to Ronna Keller, Christiana Kotyk, Richard Wetzel, Corbin Pierce and everybody else who contributed to this application and its Success.</string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -913,21 +916,21 @@
                         <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                         <color key="separatorColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Prayer" textLabel="6Ri-YI-pX8" imageView="fBy-Go-Wmv" rowHeight="44" style="IBUITableViewCellStyleDefault" id="4ml-nq-nX2">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Prayer" textLabel="6Ri-YI-pX8" imageView="fBy-Go-Wmv" rowHeight="85" style="IBUITableViewCellStyleDefault" id="4ml-nq-nX2">
+                                <rect key="frame" x="0.0" y="22" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Prayer Wall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Ri-YI-pX8">
-                                            <rect key="frame" x="53" y="0.0" width="237" height="43"/>
+                                            <rect key="frame" x="89" y="0.0" width="201" height="84"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="prayingIcon.png" id="fBy-Go-Wmv">
-                                            <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="prayerWall.png" id="fBy-Go-Wmv">
+                                            <rect key="frame" x="4" y="4" width="75" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -937,19 +940,23 @@
                                     <segue destination="Dfi-dB-nTJ" kind="custom" customClass="SWRevealViewControllerSegue" id="BD8-ko-UET"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myPrayerWall" textLabel="9lf-EA-idv" rowHeight="47" style="IBUITableViewCellStyleDefault" id="Ypc-tG-9PK">
-                                <rect key="frame" x="0.0" y="66" width="320" height="47"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myPrayerWall" textLabel="9lf-EA-idv" imageView="bBs-wS-rga" rowHeight="85" style="IBUITableViewCellStyleDefault" id="Ypc-tG-9PK">
+                                <rect key="frame" x="0.0" y="107" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="My Prayer Wall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9lf-EA-idv">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="46"/>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="My Prayer Requests" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9lf-EA-idv">
+                                            <rect key="frame" x="89" y="0.0" width="201" height="84"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="myPrayerWall.png" id="bBs-wS-rga">
+                                            <rect key="frame" x="4" y="4" width="75" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -957,15 +964,15 @@
                                     <segue destination="aZW-3o-Bci" kind="custom" customClass="SWRevealViewControllerSegue" id="b7v-5s-WZR"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myPrayers" textLabel="h2n-vw-T69" rowHeight="47" style="IBUITableViewCellStyleDefault" id="WgQ-GD-SPa">
-                                <rect key="frame" x="0.0" y="113" width="320" height="47"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myPrayers" textLabel="h2n-vw-T69" rowHeight="85" style="IBUITableViewCellStyleDefault" id="WgQ-GD-SPa">
+                                <rect key="frame" x="0.0" y="192" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="My Prayers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h2n-vw-T69">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="46"/>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="My Prayer Wall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h2n-vw-T69">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="84"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -977,21 +984,21 @@
                                     <segue destination="CG9-Uq-rQ6" kind="custom" customClass="SWRevealViewControllerSegue" id="6IR-Ur-bhh"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Praise" textLabel="GzU-Dl-BzJ" imageView="se2-gW-CjE" rowHeight="44" style="IBUITableViewCellStyleDefault" id="acX-f6-0bd">
-                                <rect key="frame" x="0.0" y="160" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Praise" textLabel="GzU-Dl-BzJ" imageView="se2-gW-CjE" rowHeight="85" style="IBUITableViewCellStyleDefault" id="acX-f6-0bd">
+                                <rect key="frame" x="0.0" y="277" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Praise Wall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GzU-Dl-BzJ">
-                                            <rect key="frame" x="53" y="0.0" width="237" height="43"/>
+                                            <rect key="frame" x="89" y="0.0" width="201" height="84"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="icon_horn.png" id="se2-gW-CjE">
-                                            <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="iconTrumpet.png" id="se2-gW-CjE">
+                                            <rect key="frame" x="4" y="4" width="75" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -1001,19 +1008,23 @@
                                     <segue destination="6b8-NZ-pMw" kind="custom" customClass="SWRevealViewControllerSegue" id="AN1-QF-6eT"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Submit" textLabel="2cl-nH-ypV" rowHeight="47" style="IBUITableViewCellStyleDefault" id="D0f-Uw-DHc">
-                                <rect key="frame" x="0.0" y="204" width="320" height="47"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Submit" textLabel="2cl-nH-ypV" imageView="qld-Vp-jhY" rowHeight="85" style="IBUITableViewCellStyleDefault" id="D0f-Uw-DHc">
+                                <rect key="frame" x="0.0" y="362" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Submit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2cl-nH-ypV">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="46"/>
+                                            <rect key="frame" x="89" y="0.0" width="201" height="84"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="submitIcon.png" id="qld-Vp-jhY">
+                                            <rect key="frame" x="4" y="4" width="75" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -1021,19 +1032,23 @@
                                     <segue destination="bMw-sf-U3v" kind="custom" customClass="SWRevealViewControllerSegue" id="9E7-A9-DGw"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Login" textLabel="i38-ny-hvR" rowHeight="47" style="IBUITableViewCellStyleDefault" id="gzU-AH-aMD">
-                                <rect key="frame" x="0.0" y="251" width="320" height="47"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Login" textLabel="i38-ny-hvR" imageView="ptF-8b-d2Q" rowHeight="85" style="IBUITableViewCellStyleDefault" id="gzU-AH-aMD">
+                                <rect key="frame" x="0.0" y="447" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i38-ny-hvR">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="46"/>
+                                            <rect key="frame" x="89" y="0.0" width="201" height="84"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="loginLogo.png" id="ptF-8b-d2Q">
+                                            <rect key="frame" x="4" y="4" width="75" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -1041,19 +1056,23 @@
                                     <segue destination="7VO-Pd-Ex8" kind="custom" identifier="Login" customClass="SWRevealViewControllerSegue" id="VYC-H7-LV3"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Logout" textLabel="fg2-9B-G9f" rowHeight="47" style="IBUITableViewCellStyleDefault" id="WfM-g5-uuG">
-                                <rect key="frame" x="0.0" y="298" width="320" height="47"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Logout" textLabel="fg2-9B-G9f" imageView="5RY-xL-zFa" rowHeight="84" style="IBUITableViewCellStyleDefault" id="WfM-g5-uuG">
+                                <rect key="frame" x="0.0" y="532" width="320" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="83"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fg2-9B-G9f">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="46"/>
+                                            <rect key="frame" x="89" y="0.0" width="201" height="83"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="logoutIcon.png" id="5RY-xL-zFa">
+                                            <rect key="frame" x="4" y="4" width="75" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -1061,19 +1080,23 @@
                                     <segue destination="VYc-Uu-D6Y" kind="custom" customClass="SWRevealViewControllerSegue" id="Hko-fn-ruB"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="About" textLabel="aUJ-02-9Iz" rowHeight="47" style="IBUITableViewCellStyleDefault" id="Sgs-r6-et3">
-                                <rect key="frame" x="0.0" y="345" width="320" height="47"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="About" textLabel="aUJ-02-9Iz" imageView="8Md-WP-0p1" rowHeight="86" style="IBUITableViewCellStyleDefault" id="Sgs-r6-et3">
+                                <rect key="frame" x="0.0" y="616" width="320" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aUJ-02-9Iz">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="46"/>
+                                            <rect key="frame" x="90" y="0.0" width="200" height="85"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="aboutIcon.png" id="8Md-WP-0p1">
+                                            <rect key="frame" x="5" y="5" width="75" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -1197,6 +1220,10 @@
                                 <rect key="frame" x="5" y="0.0" width="310" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="sky1.png" id="IL8-Vg-rf2">
+                                        <rect key="frame" x="0.0" y="-5" width="319" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PNd-Mf-4vx">
                                         <rect key="frame" x="11" y="64" width="129" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1219,7 +1246,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="wVv-6J-Zcm">
                                 <rect key="frame" x="5" y="93" width="310" height="429"/>
@@ -1282,6 +1308,10 @@
                                 <rect key="frame" x="5" y="0.0" width="310" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="sky1.png" id="ZkU-uv-mYc">
+                                        <rect key="frame" x="0.0" y="-6" width="316" height="91"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qwi-Q5-kBl">
                                         <rect key="frame" x="11" y="64" width="129" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1304,7 +1334,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="brL-Jh-Tqe">
                                 <rect key="frame" x="5" y="93" width="310" height="429"/>
@@ -1347,6 +1376,10 @@
                                 <rect key="frame" x="5" y="0.0" width="310" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="sky1.png" id="gJR-7R-YW5">
+                                        <rect key="frame" x="-5" y="0.0" width="321" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2il-7l-QIt">
                                         <rect key="frame" x="11" y="64" width="129" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1369,7 +1402,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="vHz-Ra-GIK">
                                 <rect key="frame" x="5" y="93" width="310" height="429"/>
@@ -1402,201 +1434,29 @@
         </scene>
     </scenes>
     <resources>
+        <image name="aboutIcon.png" width="75" height="75"/>
         <image name="blackXButton.png" width="75" height="74"/>
-        <image name="heart.png" width="46" height="56"/>
-        <image name="icon_horn.png" width="110" height="110"/>
+        <image name="heart.png" width="16" height="16"/>
+        <image name="iconTrumpet.png" width="75" height="75"/>
+        <image name="loginLogo.png" width="75" height="75"/>
+        <image name="logoutIcon.png" width="75" height="75"/>
         <image name="menu.png" width="28" height="20"/>
-        <image name="prayingIcon.png" width="46" height="46"/>
+        <image name="myPrayerWall.png" width="75" height="75"/>
+        <image name="prayerWall.png" width="75" height="75"/>
+        <image name="prayingIcon.png" width="16" height="16"/>
         <image name="sky1.png" width="320" height="480"/>
+        <image name="submitIcon.png" width="75" height="75"/>
     </resources>
-    <classes>
-        <class className="GAITrackedViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GAITrackedViewController.h"/>
-        </class>
-        <class className="PrayerCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PrayerCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateTime" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="numPraying" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="priority" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="requestPreview" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="PrayerDetailViewController" superclassName="GAITrackedViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PrayerDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="prayForYou:"/>
-                <relationship kind="outlet" name="dateLable" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLable" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="titleLable" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="RegisterViewController" superclassName="GAITrackedViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RegisterViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="exitButton:"/>
-                <relationship kind="action" name="registerButton:"/>
-                <relationship kind="outlet" name="churchName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="pass1" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="pass2" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ReportBug" superclassName="GAITrackedViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReportBug.h"/>
-            <relationships>
-                <relationship kind="action" name="showEmail:"/>
-                <relationship kind="outlet" name="sidebarButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="SWRevealViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SWRevealViewController.h"/>
-        </class>
-        <class className="SidebarViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SidebarViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="sideBarView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SubmitPrayerViewController" superclassName="GAITrackedViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SubmitPrayerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="LoginButtonAction:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="anonPlug:" candidateClass="UISwitch"/>
-                <relationship kind="action" name="exitButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="requestTypeButton:" candidateClass="UISegmentedControl"/>
-                <relationship kind="action" name="submitButton:"/>
-                <relationship kind="outlet" name="LoginNavButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="anonPlug" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="prayerRequest" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="sidebarButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UIRefreshControl" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIRefreshControl.h"/>
-        </class>
-        <class className="logOutVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/logOutVC.h"/>
-            <relationships>
-                <relationship kind="action" name="logOutButton:"/>
-                <relationship kind="outlet" name="infoLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="navButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="login2VC" superclassName="GAITrackedViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/login2VC.h"/>
-            <relationships>
-                <relationship kind="action" name="clearKeyboard:"/>
-                <relationship kind="action" name="loginButton:forEvent:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="navButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="passWord" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="loginViewController" superclassName="GAITrackedViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/loginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="clearKeyboardButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="loginButton:"/>
-                <relationship kind="outlet" name="passWord" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="myPrayers" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/myPrayers.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myPrayersTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="navButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="myPrayersCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/myPrayersCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="myPrayersDetail" superclassName="GAITrackedViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/myPrayersDetail.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="myRequests" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/myRequests.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myRequestsTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="navButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="myRequestsCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/myRequestsCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="numPraying" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="myRequestsDetail" superclassName="GAITrackedViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/myRequestsDetail.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="praiseCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/praiseCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="praiseDate" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="praiseTitle" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="praiseDetailViewController" superclassName="GAITrackedViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/praiseDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailLabel" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="praiseTable" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/praiseTable.h"/>
-            <relationships>
-                <relationship kind="outlet" name="MyTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="sidebarButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="prayerTable" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/prayerTable.h"/>
-            <relationships>
-                <relationship kind="outlet" name="MyTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="sidebarButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="b7v-5s-WZR"/>
-        <segue reference="BD8-ko-UET"/>
         <segue reference="6IR-Ur-bhh"/>
         <segue reference="AN1-QF-6eT"/>
+        <segue reference="BD8-ko-UET"/>
+        <segue reference="b7v-5s-WZR"/>
         <segue reference="oFN-iz-oAy"/>
     </inferredMetricsTieBreakers>
 </document>

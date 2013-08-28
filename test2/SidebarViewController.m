@@ -31,9 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:0.8f];
-    //self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:0.7f];
-    //self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
+    self.view.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.8f];
+    self.tableView.backgroundColor = [UIColor colorWithWhite:3.0f alpha:0.0f];
+    self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     
     _menuItems = @[@"Prayer", @"myPrayerWall", @"myPrayers", @"Praise", @"Submit", @"Logout" ,@"About"];
      menu2 = @[@"Prayer",@"Praise",@"Login",@"About"];
@@ -117,7 +117,6 @@
     
             //load the right view controller
          
-   
         //PhotoViewController *photoController = (PhotoViewController*)segue.destinationViewController;
        // NSString *photoFilename = [NSString stringWithFormat:@"%@_photo.jpg", [_menuItems objectAtIndex:indexPath.row]];
         //photoController.photoFilename = photoFilename;

@@ -121,7 +121,6 @@
     
 }
 
-
 - (IBAction)loginButton:(id)sender {
     
     if ([userName.text length] >1 && [passWord.text length] >1){

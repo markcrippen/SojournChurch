@@ -35,7 +35,7 @@
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     
     // manual screen tracking
-    [tracker sendView:@"My Requests"];
+    [tracker sendView:@"My Prayer Wall"];
     
     // Change button color
     _navButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
@@ -47,7 +47,7 @@
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
-    self.title = @"My Prayer Requests";
+    self.title = @"My Prayer Wall";
     
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sky1"]];

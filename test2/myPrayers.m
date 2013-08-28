@@ -35,7 +35,7 @@
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     
     // manual screen tracking
-    [tracker sendView:@"My Prayers"];
+    [tracker sendView:@"My Prayer Requests"];
     
     // Change button color
     _navButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
