@@ -32,6 +32,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    //turn into a UIwebview
+    
+    
     self.trackedViewName = @"Registration View";
     
     userName.delegate = self;

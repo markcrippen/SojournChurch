@@ -11,6 +11,8 @@
 #import "PrayerDetailViewController.h"
 #import "SWRevealViewController.h"
 #import "GAI.h"
+#import "ConnectionClass.h"
+
 
 @interface prayerTable ()
 
@@ -57,13 +59,17 @@
     self.tableView.contentInset = inset;
     
     // Uncomment the following line to preserve selection between presentations.
+    
     self.clearsSelectionOnViewWillAppear = YES;
-       
+    NSString *URLVariable = @"http://sojourn.markcrippen.com/prayerwall.php";
+    
+    //[[[ConnectionClass alloc]init] URLVariable];
+    
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSURL *url = [NSURL URLWithString:@"http://sojourn.markcrippen.com/prayerwall.php"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [NSURLConnection connectionWithRequest:request delegate:self];
     
     UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
     refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh"];
@@ -81,7 +87,7 @@
     NSURL *url = [NSURL URLWithString:@"http://sojourn.markcrippen.com/prayerwall.php"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [NSURLConnection connectionWithRequest:request delegate:self];
     
     [refreshControl endRefreshing];
 }
@@ -100,10 +106,21 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    news = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
-    NSLog(@"%@", news);
+    NSError *errorString = nil;
     
+    news = [NSJSONSerialization JSONObjectWithData:data options:0 error: &errorString];
+    if(!news){
+        NSLog(@"%@", errorString);
+        //notify user of the error
+        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+        [tracker sendException:NO withNSError:errorString];
+        UIAlertView *errorView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Error, please try again" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+        [errorView show];
+    }
+    else{
+    NSLog(@"%@", news);
     [MyTableView reloadData];
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)loadError

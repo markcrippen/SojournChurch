@@ -79,6 +79,12 @@ NSString *loginCheck;
 
 }
 
+
+- (void)viewWillAppear:(BOOL)animated {
+	segValue = [NSNumber numberWithInt:1];
+    NSLog(@"viewWillAppear segValue is 1");
+}
+
 - (void)textViewDidBeginEditing:(UITextView *)textView{
    //clears the placeholder text in the textview.
     
@@ -236,6 +242,7 @@ NSString *loginCheck;
         else{
         
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString: @"http://sojourn.markcrippen.com/createPraise.php"]];
+            NSLog(@"createPraise");
             // set Request Type
             [request setHTTPMethod: @"POST"];
             // Set content-type
