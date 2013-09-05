@@ -47,7 +47,7 @@
     
     
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg"]];
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sky1"]];
     self.tableView.backgroundColor = [UIColor clearColor];
     
     UIEdgeInsets inset = UIEdgeInsetsMake(5, 0, 0, 0);

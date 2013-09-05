@@ -26,6 +26,7 @@
 		8E5E531017CD269300C186CC /* loginLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5E530D17CD269300C186CC /* loginLogo.png */; };
 		8E5E531217CD2B6E00C186CC /* prayerConnectApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5E531117CD2B6E00C186CC /* prayerConnectApp.png */; };
 		8E5E531417CD2C5100C186CC /* iconemblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5E531317CD2C5100C186CC /* iconemblem.png */; };
+		8E6323BE17D3E800001C0858 /* ConnectionClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6323BD17D3E800001C0858 /* ConnectionClass.m */; };
 		8E716DE317A18E55001D083D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E716DE217A18E55001D083D /* CoreData.framework */; };
 		8E716DEC17A18E7E001D083D /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E716DEA17A18E7E001D083D /* libGoogleAnalytics.a */; };
 		8E716DEE17A18ECA001D083D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E716DED17A18ECA001D083D /* SystemConfiguration.framework */; };
@@ -109,6 +110,8 @@
 		8E5E530D17CD269300C186CC /* loginLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginLogo.png; sourceTree = "<group>"; };
 		8E5E531117CD2B6E00C186CC /* prayerConnectApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prayerConnectApp.png; path = ../prayerConnectApp.png; sourceTree = "<group>"; };
 		8E5E531317CD2C5100C186CC /* iconemblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconemblem.png; path = ../iconemblem.png; sourceTree = "<group>"; };
+		8E6323BC17D3E800001C0858 /* ConnectionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionClass.h; sourceTree = "<group>"; };
+		8E6323BD17D3E800001C0858 /* ConnectionClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionClass.m; sourceTree = "<group>"; };
 		8E716DE217A18E55001D083D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8E716DE417A18E7E001D083D /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
 		8E716DE517A18E7E001D083D /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 				8EBACA29177244EE005CB4A1 /* PrayerCell.m */,
 				8EB0109C17724D37000439D3 /* prayerTable.h */,
 				8EB0109D17724D37000439D3 /* prayerTable.m */,
+				8E6323BC17D3E800001C0858 /* ConnectionClass.h */,
+				8E6323BD17D3E800001C0858 /* ConnectionClass.m */,
 				8EC9EC0517947CF500602047 /* praiseDetailViewController.h */,
 				8EC9EC0617947CF500602047 /* praiseDetailViewController.m */,
 				8EDB7B80177B3D010024EF3E /* praiseCell.h */,
@@ -496,6 +501,7 @@
 				8E4FDD3617C99842008E32A4 /* myRequestsDetail.m in Sources */,
 				8E4FDD3917C99EFC008E32A4 /* myPrayersCell.m in Sources */,
 				8E4FDD3C17C9A6D5008E32A4 /* myPrayersDetail.m in Sources */,
+				8E6323BE17D3E800001C0858 /* ConnectionClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
