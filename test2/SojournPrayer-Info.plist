@@ -14,8 +14,9 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>prayerConnectApp.png</string>
+				<string>prayerConnectApp2.png</string>
 				<string>iconemblem.png</string>
+				<string>prayerConnectApp.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>

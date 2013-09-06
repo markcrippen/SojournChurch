@@ -35,7 +35,7 @@
     self.tableView.backgroundColor = [UIColor colorWithWhite:3.0f alpha:0.0f];
     self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     
-    _menuItems = @[@"Prayer", @"myPrayerWall", @"myPrayers", @"Praise", @"Submit", @"Logout" ,@"About"];
+    _menuItems = @[@"Prayer", @"myPrayerWall", @"myPrayers", @"Praise", @"myPraise", @"Submit", @"Logout" ,@"About"];
      menu2 = @[@"Prayer",@"Praise",@"Login",@"About"];
     
     UIEdgeInsets inset = UIEdgeInsetsMake(30, 0, 0, 0);
@@ -108,11 +108,11 @@
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
 {
     // Set the title of navigation bar by using the menu items
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+   // NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     
     //might need to have some logic that will let me change what is in the title
     
-    UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
+    //UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
     //destViewController.title = [[_menuItems objectAtIndex:indexPath.row] capitalizedString];
     
             //load the right view controller

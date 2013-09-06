@@ -67,7 +67,7 @@
         NSURL *url = [NSURL URLWithString:urlString];
         
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        [NSURLConnection connectionWithRequest:request delegate:self];
         
         UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
         refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh"];
@@ -93,21 +93,22 @@
     
 }
 
-- (void)refreshMyTable:(UIRefreshControl *)refreshControl {
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating..."];
-    NSLog(@"refreshMyTable");
+-(void)refreshFunction{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     NSString *name  = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginName"];
-    
     NSMutableString *urlString = [NSMutableString stringWithString: @"http://sojourn.markcrippen.com/myPrayerWall.php?name="];
     [urlString appendString: name];
-    
     NSURL *url = [NSURL URLWithString:urlString];
-    
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
+    [NSURLConnection connectionWithRequest:request delegate:self];
+}
+-(void) viewWillAppear:(BOOL)animated{
+    [self refreshFunction];
+}
+- (void)refreshMyTable:(UIRefreshControl *)refreshControl {
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating..."];
+    [self refreshFunction];
     [refreshControl endRefreshing];
 }
 
@@ -125,9 +126,9 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    news = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
+    news = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     NSLog(@"%@", news);
-    
+    NSLog(@"I am Finished!");
     [_myRequestsTable reloadData];
 }
 
@@ -188,7 +189,6 @@
     [outputFormatter setDateFormat:@"EE MM/dd/yy"];
     NSString *newDateString = [outputFormatter stringFromDate:formatterDate];
     
-    
     cell.nameLabel.text = [[news objectAtIndex:indexPath.row] objectForKey:@"displayname"];
    // cell.praiseDate.text = newDateString;
     cell.numPraying.text = [[news objectAtIndex:indexPath.row] objectForKey:@"numPraying"];
@@ -237,7 +237,45 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+        NSLog(@"edit? ");
+        NSString *idNumber = [[news objectAtIndex:indexPath.row] objectForKey:@"ID"];
+        //call the delete script
+        NSLog(@"ID Number %@", idNumber);
+        
+        NSString *myRequestString = [NSString stringWithFormat:@"id=%@", idNumber];
+        
+        // Create Data from request
+        NSData *myRequestData = [NSData dataWithBytes: [myRequestString UTF8String] length: [myRequestString length]];
+        
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString: @"http://sojourn.markcrippen.com/deleteRequest.php"]];
+        // set Request Type
+        [request setHTTPMethod: @"POST"];
+        // Set content-type
+        [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
+        // Set Request Body
+        [request setHTTPBody: myRequestData];
+        
+        // Now send a request and get Response
+        NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse: nil error: nil];
+        // Log Response
+        NSString *response = [[NSString alloc] initWithBytes:[returnData bytes] length:[returnData length] encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",response);
+        
+        response = [response stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        if ([response isEqualToString:@"the record has been deleted"]) {
+            //no alert view because the table is going to refresh
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        }
+        
+        else{
+            
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"UH OH" message:response delegate:nil cancelButtonTitle:@"Try Again" otherButtonTitles:nil];
+            [alertView show];
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        }
+        //call the refresh function to reload the data in the table
+        [self refreshFunction];
     }
 }
 /*

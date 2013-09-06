@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UITextView *detailTextView;
 
+- (IBAction)deleteButton:(id)sender;
 
 
 
@@ -23,5 +24,6 @@
 @property (strong, nonatomic) NSString *detailTitle;
 @property (strong, nonatomic) NSString *detailDateText;
 @property (strong, nonatomic) NSString *detailNameText;
+@property (strong, nonatomic) NSString *IdNum;
 
 @end

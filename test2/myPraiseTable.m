@@ -1,23 +1,22 @@
 //
-//  myPrayers.m
+//  myPraiseTable.m
 //  SojournPrayer
 //
-//  Created by Mark Crippen on 8/16/13.
+//  Created by Mark Crippen on 9/6/13.
 //  Copyright (c) 2013 Mark Crippen. All rights reserved.
 //
 
-#import "myPrayers.h"
+#import "myPraiseTable.h"
 #import "GAI.h"
+#import "myPraiseTableCell.h"
 #import "SWRevealViewController.h"
-#import "myPrayersCell.h"
-#import "myPrayersDetail.h"
+#import "myPraiseDetail.h"
 
-
-@interface myPrayers ()
+@interface myPraiseTable ()
 
 @end
 
-@implementation myPrayers
+@implementation myPraiseTable
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -31,23 +30,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [super viewDidLoad];
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     
     // manual screen tracking
-    [tracker sendView:@"My Prayer Requests"];
+    [tracker sendView:@"My Praise Wall"];
     
     // Change button color
-    _navButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
+    _navBarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
-    _navButton.target = self.revealViewController;
-    _navButton.action = @selector(revealToggle:);
+    _navBarButton.target = self.revealViewController;
+    _navBarButton.action = @selector(revealToggle:);
     
     // Set the gesture
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    // [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
-    self.title = @"I'm Praying for you";
+    self.title = @"My Praise Wall";
     
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sky1"]];
@@ -57,8 +56,17 @@
     self.tableView.contentInset = inset;
     
     if([[[NSUserDefaults standardUserDefaults] objectForKey:@"loginCheck"] isEqualToString:@"yes"]){
-
-        [self refreshView];
+        //i want to do a GET call here
+        NSString *name  = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginName"];
+        
+        NSMutableString *urlString = [NSMutableString stringWithString: @"http://sojourn.markcrippen.com/myPraiseWall.php?name="];
+        [urlString appendString: name];
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        NSURL *url = [NSURL URLWithString:urlString];
+        
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [NSURLConnection connectionWithRequest:request delegate:self];
         
         UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
         refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh"];
@@ -73,6 +81,8 @@
         [alertView show];
     }
     
+    
+    
     UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
     refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh"];
     [refresh addTarget:self
@@ -82,24 +92,23 @@
     
 }
 
--(void)refreshView{
+-(void)refreshFunction{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
     NSString *name  = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginName"];
-    NSMutableString *urlString = [NSMutableString stringWithString: @"http://sojourn.markcrippen.com/myPrayerLog.php?name="];
+    NSMutableString *urlString = [NSMutableString stringWithString: @"http://sojourn.markcrippen.com/myPraiseWall.php?name="];
     [urlString appendString: name];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
-
+-(void) viewWillAppear:(BOOL)animated{
+    [self refreshFunction];
+}
 - (void)refreshMyTable:(UIRefreshControl *)refreshControl {
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating..."];
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    [self refreshView];
+    [self refreshFunction];
     [refreshControl endRefreshing];
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    [self refreshView];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -116,23 +125,10 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    NSError *errorString = nil;
-    
-    news = [NSJSONSerialization JSONObjectWithData:data options:0 error: &errorString];
-    if(!news){
-        NSLog(@"%@", errorString);
-        //notify user of the error
-        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-        [tracker sendException:NO withNSError:errorString];
-        UIAlertView *errorView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Error, please try again" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-        [errorView show];
-    }
-    else{
-        NSLog(@"%@", news);
-        [_myPrayersTable reloadData];
-    }
-    
-
+    news = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    NSLog(@"%@", news);
+    NSLog(@"I am Finished!");
+    [self.myPraiseTable reloadData];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)loadError
@@ -158,25 +154,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
+    
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
+    
     // Return the number of rows in the section.
     return [news count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    myPrayersCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myPrayersCell"];
+    myPraiseTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myPraiseTableCell"];
     
     if (cell == nil) {
         NSLog(@"cell is Nil");
-        cell = [[myPrayersCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myPrayersCell"];
+        cell = [[myPraiseTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myPraiseTableCell"];
     }
     
     UIImage *background = [self cellBackgroundForRowAtIndexPath:indexPath];
@@ -187,19 +183,19 @@
     
     NSDateFormatter *inputFormatter = [[NSDateFormatter alloc] init];
     [inputFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSDate *formatterDate = [inputFormatter dateFromString:[[news objectAtIndex:indexPath.row] objectForKey:@"datetime"]];
+    NSDate *formatterDate = [inputFormatter dateFromString:[[news objectAtIndex:indexPath.row] objectForKey:@"dateTime"]];
     NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
     [outputFormatter setDateFormat:@"EE MM/dd/yy"];
     NSString *newDateString = [outputFormatter stringFromDate:formatterDate];
     
-    
-    cell.nameLabel.text = [[news objectAtIndex:indexPath.row] objectForKey:@"displayname"];
-    cell.dateLabel.text = newDateString;
-    cell.titleLabel.text = [[news objectAtIndex:indexPath.row] objectForKey:@"title"];
+    //cell.title.text = [[news objectAtIndex:indexPath.row] objectForKey:@"displayname"];
+    cell.date.text = newDateString;
+    //cell.numPraying.text = [[news objectAtIndex:indexPath.row] objectForKey:@"numPraying"];
+    cell.title.text = [[news objectAtIndex:indexPath.row] objectForKey:@"title"];
     
     return cell;
-
 }
+
 - (UIImage *)cellBackgroundForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger rowCount = [self tableView:[self tableView] numberOfRowsInSection:0];
@@ -226,6 +222,7 @@
 }
 
 
+
 // Override to support editing the table view.
 - (UITableViewCellEditingStyle)tableView:(UITableView *)theTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewCellEditingStyleDelete;
@@ -249,7 +246,7 @@
         // Create Data from request
         NSData *myRequestData = [NSData dataWithBytes: [myRequestString UTF8String] length: [myRequestString length]];
         
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString: @"http://sojourn.markcrippen.com/deletePrayingFor.php"]];
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString: @"http://sojourn.markcrippen.com/deletePraise.php"]];
         // set Request Type
         [request setHTTPMethod: @"POST"];
         // Set content-type
@@ -277,39 +274,47 @@
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }
         //call the refresh function to reload the data in the table
-        //[self refreshFunction];
+        [self refreshFunction];
     }
 }
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    myPrayersDetail *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"myPrayersDetail"];
+    // Navigation logic may go here. Create and push another view controller.
+    myPraiseDetail *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"myPraiseDetail"];
     
-    detail.detailText = [[news objectAtIndex:indexPath.row] objectForKey:@"request"];
-    detail.detailNameText = [[news objectAtIndex:indexPath.row] objectForKey:@"displayname"];
-    detail.detailDateText= [[news objectAtIndex:indexPath.row] objectForKey:@"datetime"];
+    detail.detailText = [[news objectAtIndex:indexPath.row] objectForKey:@"praiseNote"];
+    detail.detailNameText = [[news objectAtIndex:indexPath.row] objectForKey:@"displayName"];
+    detail.detailDateText= [[news objectAtIndex:indexPath.row] objectForKey:@"dateTime"];
     detail.detailTitle = [[news objectAtIndex:indexPath.row] objectForKey:@"title"];
-    detail.IdNum = [[news objectAtIndex:indexPath.row] objectForKey:@"id"];
+    detail.idNum = [[news objectAtIndex:indexPath.row] objectForKey:@"ID"];
     
-    [self.navigationController pushViewController:detail animated:YES];
-
-}
+    //detail.detailID = [[news objectAtIndex:indexPath.row] objectForKey:@"ID"];
+    
+    //detail.detailTextLabel = [[NSString stringWithFormat:[news objectAtIndex:indexPath.row]]];
+    
+    //detail.num = [[NSString stringWithFormat:[heads objectAtIndex:indexPath.row]] intValue];
+    
+    // NSString *cellvalue=[[news objectAtIndex:indexPath.row] objectForKey:@"request"];
+    //detail->detailText = [NSString stringWithFormat: cellvalue];
+    //NSDictionary *dict = [news objectAtIndex: indexPath.row];
+    //detail.detailTextLabel = [dict objectForKey:@"name"];
+    
+    [self.navigationController pushViewController:detail animated:YES];}
 
 @end

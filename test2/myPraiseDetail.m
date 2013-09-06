@@ -1,18 +1,19 @@
 //
-//  myPrayersDetail.m
+//  myPraiseDetail.m
 //  SojournPrayer
 //
-//  Created by Mark Crippen on 8/24/13.
+//  Created by Mark Crippen on 9/6/13.
 //  Copyright (c) 2013 Mark Crippen. All rights reserved.
 //
 
-#import "myPrayersDetail.h"
+#import "myPraiseDetail.h"
+#import "GAI.h"
 
-@interface myPrayersDetail ()
+@interface myPraiseDetail ()
 
 @end
 
-@implementation myPrayersDetail
+@implementation myPraiseDetail
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,15 +28,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    self.trackedViewName = @"My Requests Detail";
+    // Do any additional setup after loading the view.
+    self.trackedViewName = @"My Praise Detail";
     
     self.titleLabel.text = self.detailTitle;
     self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.titleLabel.numberOfLines = 2;
     self.titleLabel.preferredMaxLayoutWidth = 270.0f;
     
-    self.detailTextView.text = self.detailText;
+    self.praiseDetail.text = self.detailText;
     
     self.nameLabel.text = self.detailNameText;
     
@@ -46,10 +47,9 @@
     [outputFormatter setDateFormat:@"EE MM/dd/yy h:mm a"];
     NSString *newDateString = [outputFormatter stringFromDate:formatterDate];
     
-    self.dateLabel.text = newDateString;
-    self.dateLabel.preferredMaxLayoutWidth = 175.0f;
-    self.dateLabel.numberOfLines = 1;
-
+    self.date.text = newDateString;
+    self.date.preferredMaxLayoutWidth = 175.0f;
+    self.date.numberOfLines = 1;
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,16 +59,15 @@
 }
 
 - (IBAction)deleteButton:(id)sender {
-    
-    NSLog(@"IdNum %@", self.IdNum);
+    NSLog(@"deleteButton ID %@", self.idNum);
     
     // Create your request string with parameter name as defined in PHP file
-    NSString *myRequestString = [NSString stringWithFormat:@"id=%@", self.IdNum];
+    NSString *myRequestString = [NSString stringWithFormat:@"id=%@", self.idNum];
     
     // Create Data from request
     NSData *myRequestData = [NSData dataWithBytes: [myRequestString UTF8String] length: [myRequestString length]];
     
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString: @"http://sojourn.markcrippen.com/deletePrayingFor.php"]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString: @"http://sojourn.markcrippen.com/deletePraise.php"]];
     // set Request Type
     [request setHTTPMethod: @"POST"];
     // Set content-type
@@ -97,7 +96,10 @@
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"UH OH" message:response delegate:nil cancelButtonTitle:@"Try Again" otherButtonTitles:nil];
         [alertView show];
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        
     }
     
+    
 }
+
 @end

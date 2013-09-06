@@ -61,7 +61,7 @@
     // Uncomment the following line to preserve selection between presentations.
     
     self.clearsSelectionOnViewWillAppear = YES;
-    NSString *URLVariable = @"http://sojourn.markcrippen.com/prayerwall.php";
+    //NSString *URLVariable = @"http://sojourn.markcrippen.com/prayerwall.php";
     
     //[[[ConnectionClass alloc]init] URLVariable];
     
@@ -80,15 +80,23 @@
     
 }
 
-- (void)refreshMyTable:(UIRefreshControl *)refreshControl {
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating..."];
-    NSLog(@"refreshMyTable");
+
+- (void) refreshFunction{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSURL *url = [NSURL URLWithString:@"http://sojourn.markcrippen.com/prayerwall.php"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection connectionWithRequest:request delegate:self];
     
+     }
+
+-(void) viewWillAppear:(BOOL)animated{
+    [self refreshFunction];
+}
+- (void)refreshMyTable:(UIRefreshControl *)refreshControl {
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating..."];
+    NSLog(@"refreshMyTable");
+    [self refreshFunction];
     [refreshControl endRefreshing];
 }
 

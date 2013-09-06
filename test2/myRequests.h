@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface myRequests : UITableViewController
+@interface myRequests : UITableViewController <UITableViewDelegate>
 {
     NSMutableArray *myarray;
-    NSArray *news;
+    NSMutableArray *news;
     NSMutableData *data;
     
 }

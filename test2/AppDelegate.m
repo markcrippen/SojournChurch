@@ -47,7 +47,7 @@
     
     [self.window.rootViewController.view addSubview:splash];
     
-    [UIView animateWithDuration:1.5
+    [UIView animateWithDuration:2.1
                      animations:^{
                          splash.alpha = 0;
                      }

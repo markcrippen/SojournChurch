@@ -88,7 +88,8 @@
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"the request has been deleted" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
             [alertView show];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-            [self dismissViewControllerAnimated:YES completion:nil];
+            //UINavigationController *navController;
+            [self.navigationController popToRootViewControllerAnimated:YES];
         }
         
         else{
