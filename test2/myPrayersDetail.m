@@ -28,7 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.trackedViewName = @"My Requests Detail";
+    self.trackedViewName = @"My Prayers Detail";
     
     self.titleLabel.text = self.detailTitle;
     self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
