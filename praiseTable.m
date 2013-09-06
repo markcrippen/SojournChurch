@@ -61,7 +61,7 @@
     NSURL *url = [NSURL URLWithString:@"http://sojourn.markcrippen.com/praisewall.php"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [NSURLConnection connectionWithRequest:request delegate:self];
     
     UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
     refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh"];
@@ -79,7 +79,7 @@
     NSURL *url = [NSURL URLWithString:@"http://sojourn.markcrippen.com/praisewall.php"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [NSURLConnection connectionWithRequest:request delegate:self];
     
     [refreshControl endRefreshing];
 }
